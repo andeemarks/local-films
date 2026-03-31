@@ -68,17 +68,6 @@ export default function SessionRow({ session }: Props) {
         {meta && <span className="text-xs text-zinc-400">{meta}</span>}
       </div>
 
-      {/* Flags */}
-      {session.flags.length > 0 && (
-        <div className="shrink-0 flex gap-1">
-          {session.flags.map((f) => (
-            <span key={f} className="rounded bg-zinc-100 px-1.5 py-0.5 text-[10px] text-zinc-500">
-              {f}
-            </span>
-          ))}
-        </div>
-      )}
-
       {/* Nearing end badge */}
       {session.isNearingEndOfRun && (
         <span className="shrink-0 rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-600 ring-1 ring-red-200">
