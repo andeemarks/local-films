@@ -21,6 +21,9 @@ export default function FilmList({ films }: Props) {
     )
   }
 
+  const earliest = (film: Film) =>
+    film.sessions.map((s) => s.date).sort()[0] ?? ''
+
   const filtered = films
     .filter((film) => !showNearingEnd || film.isNearingEndOfRun)
     .map((film) => ({
@@ -28,6 +31,11 @@ export default function FilmList({ films }: Props) {
       sessions: film.sessions.filter((s) => activeCinemas.includes(s.cinemaId)),
     }))
     .filter((film) => film.sessions.length > 0)
+    .sort((a, b) => {
+      const dateDiff = earliest(a).localeCompare(earliest(b))
+      if (dateDiff !== 0) return dateDiff
+      return a.title.localeCompare(b.title)
+    })
 
   return (
     <div>

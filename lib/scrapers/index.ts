@@ -60,9 +60,11 @@ export async function scrapeAll(): Promise<ScrapeResult> {
     film.isNearingEndOfRun = computeNearingEndOfRun(film.sessions)
   }
 
-  // Sort: nearing end first, then alphabetically
+  // Sort by earliest upcoming session, then alphabetically as tiebreak
   merged.sort((a, b) => {
-    if (a.isNearingEndOfRun !== b.isNearingEndOfRun) return a.isNearingEndOfRun ? -1 : 1
+    const earliest = (f: Film) => f.sessions.map((s) => s.date).sort()[0] ?? ''
+    const dateDiff = earliest(a).localeCompare(earliest(b))
+    if (dateDiff !== 0) return dateDiff
     return a.title.localeCompare(b.title)
   })
 
