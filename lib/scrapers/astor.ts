@@ -1,17 +1,38 @@
 /**
  * Astor Theatre scraper — astortheatre.net.au
- * WordPress server-rendered HTML; Cheerio is sufficient.
  *
- * The sessions page lists films with dates/times embedded in HTML.
- * Tickets link to buy.palacecinemas.com.au; some sessions are box-office only.
+ * Each div.movie_preview is ONE SESSION (not one film).
+ * Structure:
+ *   div.movie_preview               (one per screening)
+ *     span.extrabold                (date+time text, e.g. "Thursday 7th May at 7pm")
+ *     h2.uppercase
+ *       a[href*="/films/"]          (film title; may be two for double features)
+ *         span.rating               ([MA15+] etc)
+ *     div.buttons
+ *       a.movie_link.button         (href contains YYYY-MM-DD for the date)
+ *
+ * Double features have two <a> tags in h2.uppercase separated by hr.second_film_divider.
+ * All Astor tickets are box office only — no online booking link.
  */
 
 import * as cheerio from 'cheerio'
 import type { Film, Session } from '../types'
-import { parseDate, parseTime, formatRuntime } from '../scraper-utils'
+import { parseTime, formatRuntime } from '../scraper-utils'
 
 const BASE_URL = 'https://www.astortheatre.net.au'
 const SESSIONS_URL = `${BASE_URL}/sessions`
+
+/** Parse "Thursday 7th May at 7pm" → "19:00" */
+function parseAstorTime(raw: string): string | null {
+  const match = raw.match(/at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i)
+  return match ? parseTime(match[1]) : null
+}
+
+/** Extract YYYY-MM-DD from a session info URL like /sessions/2026-05-07-000 */
+function parseDateFromHref(href: string): string | null {
+  const match = href.match(/\/sessions\/(\d{4}-\d{2}-\d{2})/)
+  return match ? match[1] : null
+}
 
 export async function scrapeAstor(): Promise<Film[]> {
   const res = await fetch(SESSIONS_URL, {
@@ -20,48 +41,56 @@ export async function scrapeAstor(): Promise<Film[]> {
   if (!res.ok) throw new Error(`Astor fetch failed: ${res.status}`)
   const html = await res.text()
   const $ = cheerio.load(html)
-  const films: Film[] = []
 
-  // Astor is WordPress — films appear as posts or custom post type entries.
-  // Each film block contains the title, date/time, and a booking link.
-  $('article, .event, .session, [class*="movie"], [class*="film"]').each((_, el) => {
-    const titleEl = $(el).find('h1, h2, h3, .entry-title, [class*="title"]').first()
-    const title = titleEl.text().trim()
-    if (!title) return
+  // Collect sessions keyed by film title
+  const filmMap = new Map<string, Film>()
 
-    const runtimeText = $(el).find('[class*="runtime"], [class*="duration"]').first().text()
-    const runtimeMinutes = formatRuntime(runtimeText)
-    const rating = $(el).find('[class*="rating"], [class*="classification"]').first().text().trim() || null
+  $('div.movie_preview').each((_, el) => {
+    const sessionHref = $(el).find('a.movie_link').attr('href') ?? ''
+    const bookingUrl = sessionHref.startsWith('http') ? sessionHref : `${BASE_URL}${sessionHref}`
+    const date = parseDateFromHref(sessionHref)
+    if (!date) return
 
-    const sessions: Session[] = []
-    // Session rows may contain date + time + booking link
-    $(el).find('a[href*="palacecinemas"], a[href*="session"], a[href*="book"]').each((_, link) => {
-      const href = $(link).attr('href') ?? ''
-      const bookingUrl = href.startsWith('http') ? href : `${BASE_URL}${href}`
-      const row = $(link).closest('tr, li, [class*="session"], [class*="time"]')
-      const timeText = row.find('time, [class*="time"]').first().text().trim() || $(link).text().trim()
-      const dateText = row.find('[class*="date"], time[datetime]').attr('datetime')
-        ?? row.find('[class*="date"]').first().text().trim()
+    const timeRaw = $(el).find('span.extrabold').first().text().trim()
+    const time = parseAstorTime(timeRaw)
+    if (!time) return
 
-      const date = parseDate(dateText)
-      const time = parseTime(timeText)
-      if (!date || !time) return
+    const format = $(el).find('div.technical_tags').text().trim() || null
+    const flags = format ? [format] : []
 
-      const isBoxOfficeOnly = row.text().toLowerCase().includes('no online')
-      sessions.push({
+    // Extract film titles from h2.uppercase links (one for single, two for double features)
+    $(el).find('h2.uppercase a[href*="/films/"]').each((_, titleLink) => {
+      const titleClone = $(titleLink).clone()
+      titleClone.find('span').remove()
+      const title = titleClone.text().trim()
+      if (!title) return
+
+      const rating = $(titleLink).find('span.rating').text().replace(/[[\]]/g, '').trim() || null
+
+      const session: Session = {
         cinemaId: 'astor',
         date,
         time,
         ticketPrice: null,
-        bookingUrl: isBoxOfficeOnly ? null : bookingUrl,
-        flags: isBoxOfficeOnly ? ['Box office only'] : [],
-      })
-    })
+        bookingUrl,        // session info page (no online ticket purchasing)
+        flags,
+      }
 
-    if (sessions.length > 0) {
-      films.push({ title, runtimeMinutes, rating, sessions, isNearingEndOfRun: false })
-    }
+      const key = title.toLowerCase()
+      const existing = filmMap.get(key)
+      if (existing) {
+        existing.sessions.push(session)
+      } else {
+        filmMap.set(key, {
+          title,
+          runtimeMinutes: formatRuntime(null),
+          rating,
+          sessions: [session],
+          isNearingEndOfRun: false,
+        })
+      }
+    })
   })
 
-  return films
+  return Array.from(filmMap.values())
 }

@@ -1,20 +1,20 @@
 /**
  * Sun Theatre scraper — suntheatre.com.au
- * WordPress/Divi server-rendered HTML; Cheerio is sufficient.
  *
- * Now Playing page: https://suntheatre.com.au/now-playing/
- * Sessions link to movietkts.com.au for booking.
- * Format flags: L (Lounge), AKP (Adults at Kids Prices), Bub (Baby), 70mm, 35mm.
+ * Structure:
+ *   div.wpcinema_allshowing_movie
+ *     h3.movietitle > a          (title text + span.rating inside)
+ *     div.wpc-session-wrap       (one per date group)
+ *       div.wpc-movie-label      (date text, e.g. "Fri 3rd Apr:")
+ *       div.wpc-session-times
+ *         span.wpcinema_session_available > a[href*="movietkts"]
  */
 
 import * as cheerio from 'cheerio'
 import type { Film, Session } from '../types'
-import { parseDate, parseTime, formatRuntime } from '../scraper-utils'
+import { parseTime, formatRuntime } from '../scraper-utils'
 
-const BASE_URL = 'https://suntheatre.com.au'
-const NOW_PLAYING_URL = `${BASE_URL}/now-playing/`
-
-// Booking URL pattern: https://movietkts.com.au/Sun-Theatre-Yarraville/[ID]/[DATE]/[TIME]/[ROOM]
+const NOW_PLAYING_URL = 'https://suntheatre.com.au/now-playing/'
 const SESSION_FLAG_PATTERN = /\b(L|AKP|Bub|70mm|35mm|MIFF)\b/g
 
 export async function scrapeSun(): Promise<Film[]> {
@@ -26,42 +26,57 @@ export async function scrapeSun(): Promise<Film[]> {
   const $ = cheerio.load(html)
   const films: Film[] = []
 
-  // Divi page builder — films are in et_pb_column or et_pb_post blocks.
-  // Each film section has a title and session links to movietkts.com.au.
-  $('[class*="et_pb_post"], [class*="movie"], article').each((_, el) => {
-    const titleEl = $(el).find('h2, h3, h4, .entry-title, [class*="title"]').first()
-    const title = titleEl.text().trim()
+  $('div.wpcinema_allshowing_movie').each((_, container) => {
+    const titleAnchor = $(container).find('h3.movietitle > a').first()
+
+    // Title text is the direct text node; rating is in a child span — clone and remove span
+    const titleClone = titleAnchor.clone()
+    titleClone.find('span').remove()
+    const title = titleClone.text().trim()
     if (!title) return
 
-    const runtimeText = $(el).find('[class*="runtime"], [class*="duration"], [class*="length"]').first().text()
-    const runtimeMinutes = formatRuntime(runtimeText)
-    const rating = $(el).find('[class*="rating"], [class*="classification"]').first().text().trim() || null
+    const rating = titleAnchor.find('span.rating').text().replace(/[()]/g, '').trim() || null
+    const runtimeMinutes = formatRuntime(
+      $(container).find('[class*="runtime"], [class*="duration"]').first().text()
+    )
 
     const sessions: Session[] = []
-    $(el).find('a[href*="movietkts.com.au"]').each((_, link) => {
-      const href = $(link).attr('href') ?? ''
-      const linkText = $(link).text().trim()
 
-      // Extract date and time from the booking URL:
-      // /Sun-Theatre-Yarraville/S26HOPPERS/2026-04-01/10:10am/Davis
-      const urlMatch = href.match(/\/(\d{4}-\d{2}-\d{2})\/([\d:apm]+)\//i)
-      const date = urlMatch ? urlMatch[1] : parseDate($(link).closest('[data-date]').attr('data-date') ?? '')
-      const rawTime = urlMatch ? urlMatch[2] : linkText
-      const time = parseTime(rawTime ?? '')
-      if (!date || !time) return
+    $(container).find('div.wpc-session-wrap').each((_, wrap) => {
+      // Date is in the URL for available sessions — extract from movietkts URL
+      $(wrap).find('span.wpcinema_session_available a[href*="movietkts"]').each((_, link) => {
+        const href = $(link).attr('href') ?? ''
 
-      // Flags are inline text tokens next to the time, e.g. "7:00pm L AKP"
-      const flags: string[] = []
-      const flagMatches = linkText.match(SESSION_FLAG_PATTERN)
-      if (flagMatches) flags.push(...flagMatches)
+        // Date embedded in URL: /YYYY-MM-DD/
+        const dateMatch = href.match(/\/(\d{4}-\d{2}-\d{2})\//)
+        if (!dateMatch) return
+        const date = dateMatch[1]
 
-      sessions.push({
-        cinemaId: 'sun',
-        date,
-        time,
-        ticketPrice: null,
-        bookingUrl: href,
-        flags,
+        // Time is link text; strip flag spans first
+        const linkClone = $(link).clone()
+        linkClone.find('span').remove()
+        const rawTime = linkClone.text().trim()
+        const time = parseTime(rawTime)
+        if (!time) return
+
+        const flags: string[] = []
+        // Flags are in span children of the link (e.g. <span class="cat-gold-icon">L</span>)
+        $(link).find('span').each((_, span) => {
+          const flag = $(span).text().trim()
+          if (flag) flags.push(flag)
+        })
+        // Also catch inline flag tokens in the text
+        const textFlags = rawTime.match(SESSION_FLAG_PATTERN)
+        if (textFlags) flags.push(...textFlags.filter((f) => !flags.includes(f)))
+
+        sessions.push({
+          cinemaId: 'sun',
+          date,
+          time,
+          ticketPrice: null,
+          bookingUrl: href,
+          flags,
+        })
       })
     })
 

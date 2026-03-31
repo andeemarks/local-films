@@ -1,95 +1,154 @@
 /**
- * Kino Cinema scraper — palacecinemas.com.au/cinemas/the-kino-melbourne
- * React SPA; Playwright required to wait for session data to load.
+ * Kino Cinema scraper — palacecinemas.com.au
+ * React SPA; Playwright is used to intercept the JSON API response
+ * that the app fetches on load, rather than parsing the rendered DOM.
  *
- * Palace Cinemas loads session data via internal API calls after hydration.
- * We wait for the session grid to appear, then extract film + session data from the DOM.
+ * Strategy: navigate to the Kino session-times page, intercept any JSON
+ * response that contains session/film data, parse it directly.
+ * Falls back to DOM parsing if no suitable API response is captured.
  */
 
 import type { Browser } from 'playwright'
 import type { Film, Session } from '../types'
 import { parseDate, parseTime, formatRuntime } from '../scraper-utils'
 
-const SESSIONS_URL = 'https://www.palacecinemas.com.au/session-times?cinemas=the-kino-melbourne'
+const SESSIONS_URL =
+  'https://www.palacecinemas.com.au/session-times?cinemas=the-kino-melbourne'
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function extractFilmsFromApiData(data: any): Film[] {
+  const films: Film[] = []
+
+  // Palace API response shape varies — try common patterns
+  const sessionGroups: unknown[] =
+    data?.sessions ?? data?.data?.sessions ?? data?.movies ?? data?.data?.movies ??
+    data?.films ?? data?.data?.films ?? []
+
+  for (const item of sessionGroups as Record<string, unknown>[]) {
+    const title: string =
+      (item?.title ?? item?.name ?? item?.movieName ?? '') as string
+    if (!title) continue
+
+    const runtimeMinutes = formatRuntime(
+      String(item?.runtime ?? item?.duration ?? item?.runTime ?? '')
+    )
+    const rating = (item?.rating ?? item?.classification ?? null) as string | null
+
+    const rawSessions: unknown[] =
+      (item?.sessions ?? item?.times ?? item?.screenings ?? []) as unknown[]
+
+    const sessions: Session[] = []
+    for (const s of rawSessions as Record<string, unknown>[]) {
+      const dateStr = String(s?.date ?? s?.sessionDate ?? s?.showDate ?? '')
+      const timeStr = String(s?.time ?? s?.sessionTime ?? s?.showTime ?? '')
+      const date = parseDate(dateStr)
+      const time = parseTime(timeStr)
+      if (!date || !time) continue
+
+      sessions.push({
+        cinemaId: 'kino',
+        date,
+        time,
+        ticketPrice: null,
+        bookingUrl: (s?.bookingUrl ?? s?.url ?? s?.link ?? null) as string | null,
+        flags: [],
+      })
+    }
+
+    if (sessions.length > 0) {
+      films.push({ title, runtimeMinutes, rating, sessions, isNearingEndOfRun: false })
+    }
+  }
+
+  return films
+}
 
 export async function scrapeKino(browser: Browser): Promise<Film[]> {
   const page = await browser.newPage()
-  try {
-    await page.goto(SESSIONS_URL, { waitUntil: 'networkidle', timeout: 30000 })
 
-    // Wait for session content to render — Palace uses skeleton loaders while fetching
-    await page.waitForSelector('[class*="session"], [class*="film"], [class*="movie"]', { timeout: 20000 })
+  // Collect all JSON API responses while the page loads
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const apiResponses: any[] = []
 
-    const films: Film[] = []
-    const filmEls = await page.$$('[class*="filmDetail"], [class*="film-item"], [class*="movie-item"], article')
-
-    for (const filmEl of filmEls) {
-      const title = await filmEl.$eval(
-        'h2, h3, [class*="title"]',
-        (el) => el.textContent?.trim() ?? '',
-      ).catch(() => '')
-      if (!title) continue
-
-      const runtimeText = await filmEl.$eval(
-        '[class*="runtime"], [class*="duration"]',
-        (el) => el.textContent ?? '',
-      ).catch(() => '')
-      const ratingText = await filmEl.$eval(
-        '[class*="rating"], [class*="classification"]',
-        (el) => el.textContent?.trim() ?? '',
-      ).catch(() => '')
-
-      const sessions: Session[] = []
-      const sessionLinks = await filmEl.$$('a[href*="session"], a[href*="book"], a[href*="ticket"]')
-
-      for (const link of sessionLinks) {
-        const href = await link.getAttribute('href') ?? ''
-        const bookingUrl = href.startsWith('http') ? href : `https://www.palacecinemas.com.au${href}`
-        const linkText = await link.textContent() ?? ''
-
-        // Palace encodes date in data attributes or nearby date headers
-        const dateAttr = await link.getAttribute('data-date')
-          ?? await link.$eval('xpath=ancestor::*[@data-date][1]', (el) => el.getAttribute('data-date') ?? '').catch(() => '')
-        const dateHeaderText = await page.evaluate((el) => {
-          // Walk up the DOM to find the nearest date heading
-          let node = el.parentElement
-          while (node) {
-            const heading = node.previousElementSibling
-            if (heading && /\d{1,2}\s+\w+|\w+\s+\d{1,2}/.test(heading.textContent ?? '')) {
-              return heading.textContent?.trim() ?? ''
-            }
-            node = node.parentElement
-          }
-          return ''
-        }, link).catch(() => '')
-
-        const date = parseDate(dateAttr || dateHeaderText)
-        const time = parseTime(linkText)
-        if (!date || !time) continue
-
-        sessions.push({
-          cinemaId: 'kino',
-          date,
-          time,
-          ticketPrice: null,
-          bookingUrl,
-          flags: [],
-        })
+  page.on('response', async (response) => {
+    const url = response.url()
+    const contentType = response.headers()['content-type'] ?? ''
+    if (
+      contentType.includes('application/json') &&
+      !url.includes('analytics') &&
+      !url.includes('segment') &&
+      !url.includes('sentry')
+    ) {
+      try {
+        const json = await response.json()
+        apiResponses.push(json)
+      } catch {
+        // ignore non-JSON or already-consumed responses
       }
+    }
+  })
 
-      if (sessions.length > 0) {
-        films.push({
-          title,
-          runtimeMinutes: formatRuntime(runtimeText),
-          rating: ratingText || null,
-          sessions,
-          isNearingEndOfRun: false,
-        })
+  try {
+    await page.goto(SESSIONS_URL, { waitUntil: 'domcontentloaded', timeout: 30000 })
+    // Give the SPA time to fire its API calls and render
+    await page.waitForTimeout(8000)
+
+    // Try to find session data in any captured API response
+    for (const data of apiResponses) {
+      const films = extractFilmsFromApiData(data)
+      if (films.length > 0) {
+        console.log(`  Kino: found data via API interception (${films.length} films)`)
+        return films
       }
     }
 
-    return films
+    // Fallback: try extracting from the rendered DOM
+    console.log('  Kino: API interception found no data, falling back to DOM parsing')
+    return await extractFromDom(page)
   } finally {
     await page.close()
   }
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function extractFromDom(page: any): Promise<Film[]> {
+  const films: Film[] = []
+
+  try {
+    // Try to find any element that might contain film/session data
+    const content = await page.content()
+    const { load } = await import('cheerio')
+    const $ = load(content)
+
+    // Palace uses Chakra UI — class names are hashed. Look for data attributes or text patterns.
+    // Find all links that look like booking links
+    $('a[href*="session"], a[href*="ticket"], a[href*="book"]').each((_, link) => {
+      const href = $(link).attr('href') ?? ''
+      const timeText = $(link).text().trim()
+      const time = parseTime(timeText)
+      if (!time) return
+
+      // Look for a nearby heading as the film title
+      const heading = $(link).closest('section, article, [class]')
+        .find('h1, h2, h3').first().text().trim()
+      if (!heading) return
+
+      const dateAttr = $(link).attr('data-date')
+        ?? $(link).closest('[data-date]').attr('data-date')
+      const date = parseDate(dateAttr ?? '')
+      if (!date) return
+
+      films.push({
+        title: heading,
+        runtimeMinutes: null,
+        rating: null,
+        sessions: [{ cinemaId: 'kino', date, time, ticketPrice: null, bookingUrl: href, flags: [] }],
+        isNearingEndOfRun: false,
+      })
+    })
+  } catch (err) {
+    console.warn('  Kino DOM fallback failed:', err instanceof Error ? err.message : err)
+  }
+
+  return films
 }
