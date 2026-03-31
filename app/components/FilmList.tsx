@@ -2,13 +2,22 @@
 
 import { useState } from 'react'
 import type { Film, CinemaId } from '@/lib/types'
-import FilmCard from './FilmCard'
+import SessionRow, { type SessionWithFilm } from './SessionRow'
 import Filters from './Filters'
 
 const ALL_CINEMAS: CinemaId[] = ['kino', 'nova', 'astor', 'sun']
 
 interface Props {
   films: Film[]
+}
+
+function formatDayHeading(iso: string): string {
+  const d = new Date(`${iso}T00:00:00`)
+  return d.toLocaleDateString('en-AU', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'short',
+  })
 }
 
 export default function FilmList({ films }: Props) {
@@ -21,21 +30,36 @@ export default function FilmList({ films }: Props) {
     )
   }
 
-  const earliest = (film: Film) =>
-    film.sessions.map((s) => s.date).sort()[0] ?? ''
+  // Flatten all sessions into SessionWithFilm[]
+  const allSessions: SessionWithFilm[] = films.flatMap((film) =>
+    film.sessions.map((s) => ({
+      ...s,
+      filmTitle: film.title,
+      filmRating: film.rating,
+      filmRuntimeMinutes: film.runtimeMinutes,
+      isNearingEndOfRun: film.isNearingEndOfRun,
+    })),
+  )
 
-  const filtered = films
-    .filter((film) => !showNearingEnd || film.isNearingEndOfRun)
-    .map((film) => ({
-      ...film,
-      sessions: film.sessions.filter((s) => activeCinemas.includes(s.cinemaId)),
+  const filtered = allSessions
+    .filter((s) => activeCinemas.includes(s.cinemaId))
+    .filter((s) => !showNearingEnd || s.isNearingEndOfRun)
+
+  // Group by date, sorted chronologically
+  const byDate = new Map<string, SessionWithFilm[]>()
+  for (const s of filtered) {
+    const group = byDate.get(s.date) ?? []
+    group.push(s)
+    byDate.set(s.date, group)
+  }
+  const days = Array.from(byDate.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([date, sessions]) => ({
+      date,
+      sessions: sessions.sort((a, b) =>
+        a.time.localeCompare(b.time) || a.filmTitle.localeCompare(b.filmTitle),
+      ),
     }))
-    .filter((film) => film.sessions.length > 0)
-    .sort((a, b) => {
-      const dateDiff = earliest(a).localeCompare(earliest(b))
-      if (dateDiff !== 0) return dateDiff
-      return a.title.localeCompare(b.title)
-    })
 
   return (
     <div>
@@ -44,15 +68,27 @@ export default function FilmList({ films }: Props) {
         onToggleCinema={toggleCinema}
         showNearingEnd={showNearingEnd}
         onToggleNearingEnd={() => setShowNearingEnd((v) => !v)}
-        filmCount={filtered.length}
+        sessionCount={filtered.length}
       />
 
-      {filtered.length === 0 ? (
+      {days.length === 0 ? (
         <p className="mt-12 text-center text-zinc-400">No sessions match your filters.</p>
       ) : (
-        <div className="mt-6 grid gap-4 sm:grid-cols-1 lg:grid-cols-2">
-          {filtered.map((film) => (
-            <FilmCard key={film.title} film={film} />
+        <div className="mt-6 space-y-8">
+          {days.map(({ date, sessions }) => (
+            <section key={date}>
+              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-zinc-400">
+                {formatDayHeading(date)}
+                <span className="ml-2 font-normal normal-case text-zinc-300">
+                  {sessions.length} session{sessions.length !== 1 ? 's' : ''}
+                </span>
+              </h2>
+              <div className="rounded-2xl border border-zinc-200 bg-white shadow-sm divide-y divide-zinc-100">
+                {sessions.map((s, i) => (
+                  <SessionRow key={`${s.cinemaId}-${s.date}-${s.time}-${i}`} session={s} />
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       )}

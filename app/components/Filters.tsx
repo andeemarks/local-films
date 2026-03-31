@@ -7,7 +7,7 @@ interface Props {
   onToggleCinema: (id: CinemaId) => void
   showNearingEnd: boolean
   onToggleNearingEnd: () => void
-  filmCount: number
+  sessionCount: number
 }
 
 const CINEMA_ORDER: CinemaId[] = ['kino', 'nova', 'astor', 'sun']
@@ -17,11 +17,11 @@ export default function Filters({
   onToggleCinema,
   showNearingEnd,
   onToggleNearingEnd,
-  filmCount,
+  sessionCount,
 }: Props) {
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="text-sm text-zinc-500 mr-1">{filmCount} film{filmCount !== 1 ? 's' : ''}</span>
+      <span className="text-sm text-zinc-500 mr-1">{sessionCount} session{sessionCount !== 1 ? 's' : ''}</span>
 
       {CINEMA_ORDER.map((id) => {
         const active = activeCinemas.includes(id)
