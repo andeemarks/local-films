@@ -1,95 +1,78 @@
 /**
  * Astor Theatre scraper — astortheatre.net.au
  *
- * Each div.movie_preview is ONE SESSION (not one film).
- * Structure:
- *   div.movie_preview               (one per screening)
- *     span.extrabold                (date+time text, e.g. "Thursday 7th May at 7pm")
- *     h2.uppercase
- *       a[href*="/films/"]          (film title; may be two for double features)
- *         span.rating               ([MA15+] etc)
- *     div.buttons
- *       a.movie_link.button         (href contains YYYY-MM-DD for the date)
+ * Uses the Astor RSS feed which is far more reliable than HTML scraping.
+ * Feed URL: https://www.astortheatre.net.au/?feed=astor-rss
  *
- * Double features have two <a> tags in h2.uppercase separated by hr.second_film_divider.
- * All Astor tickets are box office only — no online booking link.
+ * Each <item> is one session. The <title> encodes date, time, and film title:
+ *   "Thu, 02 Apr 2026 at 7:00pm - Once Upon a Time… In Hollywood – 35MM"
+ *
+ * The <link> encodes the date numerically: /sessions/2026-04-02-1900
+ * Used as the booking URL (links to the session info page).
  */
 
 import * as cheerio from 'cheerio'
 import type { Film, Session } from '../types'
-import { parseTime, formatRuntime } from '../scraper-utils'
+import { parseTime } from '../scraper-utils'
+import { parse, format, isValid } from 'date-fns'
 
-const BASE_URL = 'https://www.astortheatre.net.au'
-const SESSIONS_URL = `${BASE_URL}/sessions`
+const RSS_URL = 'https://www.astortheatre.net.au/?feed=astor-rss'
 
-/** Parse "Thursday 7th May at 7pm" → "19:00" */
-function parseAstorTime(raw: string): string | null {
-  const match = raw.match(/at\s+(\d{1,2}(?::\d{2})?\s*(?:am|pm))/i)
-  return match ? parseTime(match[1]) : null
-}
+// "Thu, 02 Apr 2026 at 7:00pm - Film Title Here"
+const TITLE_RE = /\d{1,2}\s+\w+\s+\d{4}\s+at\s+(\d{1,2}:\d{2}(?:am|pm))\s+-\s+(.+)$/i
+const DATE_RE = /(\d{1,2}\s+\w+\s+\d{4})/
 
-/** Extract YYYY-MM-DD from a session info URL like /sessions/2026-05-07-000 */
-function parseDateFromHref(href: string): string | null {
-  const match = href.match(/\/sessions\/(\d{4}-\d{2}-\d{2})/)
-  return match ? match[1] : null
+function parseRssDate(raw: string): string | null {
+  const match = raw.match(DATE_RE)
+  if (!match) return null
+  const d = parse(match[1], 'd MMM yyyy', new Date())
+  return isValid(d) ? format(d, 'yyyy-MM-dd') : null
 }
 
 export async function scrapeAstor(): Promise<Film[]> {
-  const res = await fetch(SESSIONS_URL, {
+  const res = await fetch(RSS_URL, {
     headers: { 'User-Agent': 'Mozilla/5.0 (compatible; local-films-bot/1.0)' },
   })
-  if (!res.ok) throw new Error(`Astor fetch failed: ${res.status}`)
-  const html = await res.text()
-  const $ = cheerio.load(html)
+  if (!res.ok) throw new Error(`Astor RSS fetch failed: ${res.status}`)
+  const xml = await res.text()
+  const $ = cheerio.load(xml, { xmlMode: true })
 
-  // Collect sessions keyed by film title
   const filmMap = new Map<string, Film>()
 
-  $('div.movie_preview').each((_, el) => {
-    const sessionHref = $(el).find('a.movie_link').attr('href') ?? ''
-    const bookingUrl = sessionHref.startsWith('http') ? sessionHref : `${BASE_URL}${sessionHref}`
-    const date = parseDateFromHref(sessionHref)
-    if (!date) return
+  $('item').each((_, el) => {
+    const titleRaw = $(el).find('title').first().text().trim()
+    const link = $(el).find('link').first().text().trim()
 
-    const timeRaw = $(el).find('span.extrabold').first().text().trim()
-    const time = parseAstorTime(timeRaw)
-    if (!time) return
+    const match = titleRaw.match(TITLE_RE)
+    if (!match) return
 
-    const format = $(el).find('div.technical_tags').text().trim() || null
-    const flags = format ? [format] : []
+    const time = parseTime(match[1])
+    const filmTitle = match[2].trim()
+    const date = parseRssDate(titleRaw)
+    if (!time || !date || !filmTitle) return
 
-    // Extract film titles from h2.uppercase links (one for single, two for double features)
-    $(el).find('h2.uppercase a[href*="/films/"]').each((_, titleLink) => {
-      const titleClone = $(titleLink).clone()
-      titleClone.find('span').remove()
-      const title = titleClone.text().trim()
-      if (!title) return
+    const session: Session = {
+      cinemaId: 'astor',
+      date,
+      time,
+      ticketPrice: null,
+      bookingUrl: link || null,
+      flags: [],
+    }
 
-      const rating = $(titleLink).find('span.rating').text().replace(/[[\]]/g, '').trim() || null
-
-      const session: Session = {
-        cinemaId: 'astor',
-        date,
-        time,
-        ticketPrice: null,
-        bookingUrl,        // session info page (no online ticket purchasing)
-        flags,
-      }
-
-      const key = title.toLowerCase()
-      const existing = filmMap.get(key)
-      if (existing) {
-        existing.sessions.push(session)
-      } else {
-        filmMap.set(key, {
-          title,
-          runtimeMinutes: formatRuntime(null),
-          rating,
-          sessions: [session],
-          isNearingEndOfRun: false,
-        })
-      }
-    })
+    const key = filmTitle.toLowerCase()
+    const existing = filmMap.get(key)
+    if (existing) {
+      existing.sessions.push(session)
+    } else {
+      filmMap.set(key, {
+        title: filmTitle,
+        runtimeMinutes: null,
+        rating: null,
+        sessions: [session],
+        isNearingEndOfRun: false,
+      })
+    }
   })
 
   return Array.from(filmMap.values())

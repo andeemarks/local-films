@@ -5,7 +5,7 @@
 import { format, parse, isValid, addDays } from 'date-fns'
 
 export const NEARING_END_DAYS = 3
-export const SESSION_WINDOW_DAYS = 14
+export const SESSION_WINDOW_DAYS = 60
 
 /**
  * Attempt to parse a fuzzy date string into an ISO "YYYY-MM-DD" string.
