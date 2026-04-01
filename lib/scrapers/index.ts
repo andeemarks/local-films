@@ -3,7 +3,6 @@
  * Merges films with the same title across cinemas into one Film entry.
  */
 
-import { chromium } from 'playwright'
 import type { Film, ScrapeResult } from '../types'
 import { computeNearingEndOfRun, SESSION_WINDOW_DAYS, localToday } from '../scraper-utils'
 import { format, addDays, parse as parseDate } from 'date-fns'
@@ -13,14 +12,11 @@ import { scrapeSun } from './sun'
 import { scrapeKino } from './kino'
 
 export async function scrapeAll(): Promise<ScrapeResult> {
-  console.log('Launching Playwright browser for Kino...')
-  const browser = await chromium.launch({ headless: true })
-
   let allFilms: Film[] = []
   const errors: string[] = []
 
   const scrapers: [string, () => Promise<Film[]>][] = [
-    ['Kino', () => scrapeKino(browser)],
+    ['Kino', () => scrapeKino()],
     ['Cinema Nova', () => scrapeNova()],
     ['Astor', () => scrapeAstor()],
     ['Sun Theatre', () => scrapeSun()],
@@ -38,8 +34,6 @@ export async function scrapeAll(): Promise<ScrapeResult> {
       errors.push(`${name}: ${msg}`)
     }
   }
-
-  await browser.close()
 
   if (errors.length > 0) {
     console.warn(`Scrape completed with ${errors.length} error(s):\n  ${errors.join('\n  ')}`)
