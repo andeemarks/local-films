@@ -1,23 +1,22 @@
 /**
  * Cinema Nova scraper — cinemanova.com.au
  *
- * Homepage: a.coming-soon-poster[href*="/films/"] → film detail URLs
+ * Homepage: bare <a href="/films/slug"> or <a href="https://...cinemanova.com.au/films/slug">
+ * (no class on the anchor — previous agent gave us wrong class names)
  *
- * Detail page structure:
- *   #movie-content
- *     h3                          (film title, no class)
- *     div.start-times
- *       div.start-times-date      (date text, e.g. "Wednesday, 1st April")
- *       div.start-times-time
- *         a.showtime              (booking link)
- *           p                     (time text, e.g. "11:00")
+ * Detail page: no class-based selectors exist for sessions.
+ * Dates are plain text nodes; times are bare <a href*="ticketing.cinemanova.com.au"> links.
+ * We walk all nodes in document order — when we see date-like text we set currentDate,
+ * when we see a ticketing link we emit a session under that date.
  */
 
 import * as cheerio from 'cheerio'
 import type { Film, Session } from '../types'
-import { parseDate, parseTime, formatRuntime } from '../scraper-utils'
+import { parseDate, parseTime } from '../scraper-utils'
 
 const BASE_URL = 'https://www.cinemanova.com.au'
+// Only match /films/ detail pages, not nav/utility links
+const FILM_HREF_RE = /\/films\/[\w-]+\/?$/
 
 async function fetchHtml(url: string): Promise<string> {
   const res = await fetch(url, {
@@ -31,53 +30,47 @@ async function scrapeFilmPage(url: string): Promise<Film | null> {
   const html = await fetchHtml(url)
   const $ = cheerio.load(html)
 
-  const title = $('#movie-content h3').first().text().trim()
-    || $('h3').first().text().trim()
+  // Title is in the first h3 on the page
+  const title = $('h3').first().text().trim()
   if (!title) return null
 
-  const runtimeMinutes = formatRuntime(
-    $('[class*="runtime"], [class*="duration"]').first().text()
-  )
-  const rating = $('[class*="rating"], [class*="classification"]').first().text().trim() || null
-
   const sessions: Session[] = []
-
-  // Walk the start-times container — date divs set current date,
-  // showtime links create sessions under that date
   let currentDate: string | null = null
-  $('.start-times .row').children().each((_, el) => {
-    const $el = $(el)
-    const dateText = $el.find('div.start-times-date').first().text().trim()
-    if (dateText) {
-      const parsed = parseDate(dateText)
-      if (parsed) currentDate = parsed
-      return
-    }
 
-    if (!currentDate) return
-    $el.find('a.showtime').each((_, link) => {
-      const href = $(link).attr('href') ?? ''
-      const timeText = $(link).find('p').first().text().trim()
+  // Walk every element in the document. Dates appear as text in elements that
+  // contain no ticketing link children; ticketing links are the session anchors.
+  $('*').each((_, el) => {
+    const $el = $(el)
+
+    // Skip elements that contain child elements (only want leaf text nodes)
+    if ($el.children('*').length > 0) return
+
+    const href = $el.attr('href') ?? ''
+    if (href.includes('ticketing.cinemanova.com.au')) {
+      // This is a session link
+      if (!currentDate) return
+      const timeText = $el.text().trim()
       const time = parseTime(timeText)
       if (!time) return
-
-      const flags: string[] = []
-      const accessibilityText = $(link).find('small').text().trim()
-      if (accessibilityText) flags.push(accessibilityText)
-
       sessions.push({
         cinemaId: 'nova',
-        date: currentDate!,
+        date: currentDate,
         time,
         ticketPrice: null,
         bookingUrl: href,
-        flags,
+        flags: [],
       })
-    })
+    } else {
+      // Check if this element's text looks like a date
+      const text = $el.text().trim()
+      if (!text || text.length > 40) return
+      const parsed = parseDate(text)
+      if (parsed) currentDate = parsed
+    }
   })
 
   if (sessions.length === 0) return null
-  return { title, runtimeMinutes, rating, sessions, isNearingEndOfRun: false }
+  return { title, runtimeMinutes: null, rating: null, sessions, isNearingEndOfRun: false }
 }
 
 export async function scrapeNova(): Promise<Film[]> {
@@ -85,9 +78,11 @@ export async function scrapeNova(): Promise<Film[]> {
   const $ = cheerio.load(html)
 
   const filmUrls = new Set<string>()
-  $('a.coming-soon-poster[href*="/films/"]').each((_, el) => {
+  $('a[href]').each((_, el) => {
     const href = $(el).attr('href') ?? ''
-    if (href) filmUrls.add(href.startsWith('http') ? href : `${BASE_URL}${href}`)
+    if (FILM_HREF_RE.test(href)) {
+      filmUrls.add(href.startsWith('http') ? href : `${BASE_URL}${href}`)
+    }
   })
 
   console.log(`  Nova: found ${filmUrls.size} film pages`)

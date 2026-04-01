@@ -74,16 +74,16 @@ export default function FilmList({ films }: Props) {
       {days.length === 0 ? (
         <p className="mt-12 text-center text-zinc-400">No sessions match your filters.</p>
       ) : (
-        <div className="mt-6 space-y-8">
+        <div className="mt-4 space-y-4">
           {days.map(({ date, sessions }) => (
             <section key={date}>
-              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-zinc-400">
+              <h2 className="mb-1 text-xs font-semibold uppercase tracking-wide text-zinc-400">
                 {formatDayHeading(date)}
                 <span className="ml-2 font-normal normal-case text-zinc-300">
                   {sessions.length} session{sessions.length !== 1 ? 's' : ''}
                 </span>
               </h2>
-              <div className="rounded-2xl border border-zinc-200 bg-white shadow-sm divide-y divide-zinc-100">
+              <div className="rounded-xl border border-zinc-200 bg-white shadow-sm divide-y divide-zinc-100">
                 {sessions.map((s, i) => (
                   <SessionRow key={`${s.cinemaId}-${s.date}-${s.time}-${i}`} session={s} />
                 ))}

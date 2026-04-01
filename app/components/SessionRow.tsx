@@ -51,21 +51,21 @@ export default function SessionRow({ session }: Props) {
   ].filter(Boolean).join(' · ')
 
   const inner = (
-    <div className="flex items-center gap-3 py-3 px-4 rounded-xl hover:bg-zinc-50 transition-colors group">
+    <div className="flex items-center gap-2 py-1.5 px-3 hover:bg-zinc-50 transition-colors">
       {/* Time */}
-      <span className="w-16 shrink-0 text-sm font-semibold tabular-nums text-zinc-800">
+      <span className="w-14 shrink-0 text-sm font-semibold tabular-nums text-zinc-800">
         {formatTime(session.time)}
       </span>
 
       {/* Cinema badge */}
-      <span className={`shrink-0 rounded-md px-2 py-0.5 text-xs font-medium ${colour}`}>
+      <span className={`shrink-0 rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
         {cinema.name}
       </span>
 
-      {/* Film title + meta */}
-      <div className="flex-1 min-w-0">
-        <span className="font-medium text-zinc-900 truncate block">{session.filmTitle}</span>
-        {meta && <span className="text-xs text-zinc-400">{meta}</span>}
+      {/* Film title + meta inline */}
+      <div className="flex-1 min-w-0 flex items-baseline gap-2">
+        <span className="text-sm font-medium text-zinc-900 truncate">{session.filmTitle}</span>
+        {meta && <span className="shrink-0 text-xs text-zinc-400">{meta}</span>}
       </div>
 
       {/* Nearing end badge */}

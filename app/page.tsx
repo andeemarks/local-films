@@ -23,10 +23,10 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-zinc-50">
-      <div className="mx-auto max-w-6xl px-4 py-10">
+      <div className="mx-auto max-w-6xl px-4 py-6">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900">
+        <div className="mb-4">
+          <h1 className="text-2xl font-extrabold tracking-tight text-zinc-900">
             Now Showing
           </h1>
           <p className="mt-1 text-sm text-zinc-400">
