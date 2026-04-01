@@ -34,6 +34,10 @@ export function formatTime(time: string): string {
   return `${h}:${String(m).padStart(2, '0')}${meridiem}`
 }
 
+function sessionDateTime(date: string, time: string): Date {
+  return new Date(`${date}T${time}`)
+}
+
 function novaMondayPrice(cinemaId: string, date: string, time: string): string | null {
   if (cinemaId !== 'nova') return null
   const day = new Date(`${date}T00:00:00`).getDay() // 0=Sun, 1=Mon
@@ -49,14 +53,12 @@ function kinoDiscountPrice(cinemaId: string, date: string): string | null {
 }
 
 export function isStartingWithinHour(date: string, time: string): boolean {
-  const sessionTime = new Date(`${date}T${time}`)
-  const now = new Date()
-  const diffMs = sessionTime.getTime() - now.getTime()
+  const diffMs = sessionDateTime(date, time).getTime() - Date.now()
   return diffMs >= 0 && diffMs <= 60 * 60 * 1000
 }
 
 export function isAlreadyStarted(date: string, time: string): boolean {
-  return new Date(`${date}T${time}`).getTime() < Date.now()
+  return sessionDateTime(date, time).getTime() < Date.now()
 }
 
 function toSentenceCase(s: string): string {
@@ -68,15 +70,15 @@ export function getPromoPrice(cinemaId: string, date: string, time: string): str
   return novaMondayPrice(cinemaId, date, time) ?? kinoDiscountPrice(cinemaId, date)
 }
 
-/** Session content without the time — for use in multi-column rows. */
-export function SessionCard({ session, className = '' }: { session: SessionWithFilm; className?: string }) {
+function SessionBody({ session, promoPrice, displayPrice }: {
+  session: SessionWithFilm
+  promoPrice: string | null
+  displayPrice: string | null
+}) {
   const cinema = CINEMAS[session.cinemaId]
   const colour = CINEMA_COLOURS[session.cinemaId] ?? 'bg-zinc-100 text-zinc-700'
-  const promoPrice = getPromoPrice(session.cinemaId, session.date, session.time)
-  const displayPrice = session.ticketPrice ?? promoPrice
-
-  const content = (
-    <div className={`flex flex-col gap-0.5 py-0.5 px-2 rounded transition-colors ${promoPrice ? 'hover:bg-sky-100' : 'hover:bg-zinc-100'}`}>
+  return (
+    <>
       <div className="flex items-baseline gap-1.5 min-w-0">
         <span className="text-sm font-medium text-zinc-900 truncate">{toSentenceCase(session.filmTitle)}</span>
         {session.filmRating && <span className="shrink-0 text-xs text-zinc-400">({session.filmRating})</span>}
@@ -94,6 +96,18 @@ export function SessionCard({ session, className = '' }: { session: SessionWithF
           </span>
         )}
       </div>
+    </>
+  )
+}
+
+/** Session content without the time — for use in multi-column rows. */
+export function SessionCard({ session, className = '' }: { session: SessionWithFilm; className?: string }) {
+  const promoPrice = getPromoPrice(session.cinemaId, session.date, session.time)
+  const displayPrice = session.ticketPrice ?? promoPrice
+
+  const content = (
+    <div className={`flex flex-col gap-0.5 py-0.5 px-2 rounded transition-colors ${promoPrice ? 'hover:bg-sky-100' : 'hover:bg-zinc-100'}`}>
+      <SessionBody session={session} promoPrice={promoPrice} displayPrice={displayPrice} />
     </div>
   )
 
@@ -108,8 +122,6 @@ export function SessionCard({ session, className = '' }: { session: SessionWithF
 }
 
 export default function SessionRow({ session }: Props) {
-  const cinema = CINEMAS[session.cinemaId]
-  const colour = CINEMA_COLOURS[session.cinemaId] ?? 'bg-zinc-100 text-zinc-700'
   const started = isAlreadyStarted(session.date, session.time)
   const startingSoon = isStartingWithinHour(session.date, session.time)
   const promoPrice = getPromoPrice(session.cinemaId, session.date, session.time)
@@ -121,23 +133,7 @@ export default function SessionRow({ session }: Props) {
         {formatTime(session.time)}
       </span>
       <div className="flex-1 min-w-0 flex flex-col gap-0.5">
-        <div className="flex items-baseline gap-1.5 min-w-0">
-          <span className="text-sm font-medium text-zinc-900 truncate">{toSentenceCase(session.filmTitle)}</span>
-          {session.filmRating && <span className="shrink-0 text-xs text-zinc-400">({session.filmRating})</span>}
-        </div>
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
-            {cinema.name}
-          </span>
-          {displayPrice && (
-            <span className={`text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
-          )}
-          {session.isNearingEndOfRun && (
-            <span className="rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-600 ring-1 ring-red-200">
-              Last few days
-            </span>
-          )}
-        </div>
+        <SessionBody session={session} promoPrice={promoPrice} displayPrice={displayPrice} />
       </div>
     </div>
   )
@@ -149,6 +145,5 @@ export default function SessionRow({ session }: Props) {
       </a>
     )
   }
-
   return <div className={started ? 'opacity-40' : ''}>{inner}</div>
 }

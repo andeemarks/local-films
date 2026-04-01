@@ -37,6 +37,12 @@ const TIME_OF_DAY_LABELS: Record<TimeOfDay, string> = {
 
 const TIME_OF_DAY_ORDER: TimeOfDay[] = ['morning', 'afternoon', 'evening']
 
+function slotBg(slotSessions: SessionWithFilm[]): string {
+  if (slotSessions.some(s => isStartingWithinHour(s.date, s.time))) return 'bg-amber-50 hover:bg-amber-100'
+  if (slotSessions.some(s => getPromoPrice(s.cinemaId, s.date, s.time))) return 'bg-sky-50 hover:bg-sky-100'
+  return 'hover:bg-zinc-50'
+}
+
 export default function FilmList({ films }: Props) {
   const [activeCinemas, setActiveCinemas] = useState<CinemaId[]>(ALL_CINEMAS)
   const [showNearingEnd, setShowNearingEnd] = useState(false)
@@ -133,7 +139,7 @@ export default function FilmList({ films }: Props) {
                               }
                               const slotStarted = isAlreadyStarted(slotSessions[0].date, time)
                               return (
-                                <div key={time} className={`flex items-start gap-2 py-1 px-3 transition-colors${slotStarted ? ' opacity-40' : ''} ${slotSessions.some(s => isStartingWithinHour(s.date, s.time)) ? 'bg-amber-50 hover:bg-amber-100' : slotSessions.some(s => getPromoPrice(s.cinemaId, s.date, s.time)) ? 'bg-sky-50 hover:bg-sky-100' : 'hover:bg-zinc-50'}`}>
+                                <div key={time} className={`flex items-start gap-2 py-1 px-3 transition-colors${slotStarted ? ' opacity-40' : ''} ${slotBg(slotSessions)}`}>
                                   <span className="w-14 shrink-0 pt-1.5 text-sm font-semibold tabular-nums text-zinc-800">
                                     {formatTime(time)}
                                   </span>
