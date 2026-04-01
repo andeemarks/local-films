@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import type { Film, CinemaId } from '@/lib/types'
-import SessionRow, { type SessionWithFilm } from './SessionRow'
+import SessionRow, { SessionCard, formatTime, type SessionWithFilm } from './SessionRow'
 import Filters from './Filters'
 
 const ALL_CINEMAS: CinemaId[] = ['kino', 'nova', 'astor', 'sun']
@@ -117,9 +117,34 @@ export default function FilmList({ films }: Props) {
                         </span>
                       </div>
                       <div className="divide-y divide-zinc-100">
-                        {groups.get(tod)!.map((s, i) => (
-                          <SessionRow key={`${s.cinemaId}-${s.date}-${s.time}-${i}`} session={s} />
-                        ))}
+                        {(() => {
+                          const byTime = new Map<string, SessionWithFilm[]>()
+                          for (const s of groups.get(tod)!) {
+                            const arr = byTime.get(s.time) ?? []
+                            arr.push(s)
+                            byTime.set(s.time, arr)
+                          }
+                          return Array.from(byTime.entries())
+                            .sort(([a], [b]) => a.localeCompare(b))
+                            .map(([time, slotSessions]) => {
+                              if (slotSessions.length === 1) {
+                                const s = slotSessions[0]
+                                return <SessionRow key={`${s.cinemaId}-${s.date}-${time}`} session={s} />
+                              }
+                              return (
+                                <div key={time} className="flex items-start gap-2 py-1.5 px-3 hover:bg-zinc-50 transition-colors">
+                                  <span className="w-14 shrink-0 pt-1.5 text-sm font-semibold tabular-nums text-zinc-800">
+                                    {formatTime(time)}
+                                  </span>
+                                  <div className="flex-1 flex flex-wrap gap-1">
+                                    {slotSessions.map((s, i) => (
+                                      <SessionCard key={`${s.cinemaId}-${time}-${i}`} session={s} className="flex-1 min-w-48" />
+                                    ))}
+                                  </div>
+                                </div>
+                              )
+                            })
+                        })()}
                       </div>
                     </div>
                   ))
