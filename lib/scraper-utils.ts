@@ -19,14 +19,16 @@ export function parseDate(raw: string | undefined | null): string | null {
   if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s
 
   const formats = [
-    'dd MMM yyyy',   // 01 Apr 2026
-    'dd MMMM yyyy',  // 01 April 2026
-    'EEE dd MMM',    // Tue 01 Apr  — year assumed current/next
-    'EEE d MMM',     // Tue 1 Apr
-    'EEEE d MMMM',   // Tuesday 1 April
-    'd MMMM',        // 1 April
-    'd MMM',         // 1 Apr
-    'MMM d',         // Apr 1
+    'dd MMM yyyy',      // 01 Apr 2026
+    'dd MMMM yyyy',     // 01 April 2026
+    'EEE dd MMM',       // Tue 01 Apr  — year assumed current/next
+    'EEE d MMM',        // Tue 1 Apr
+    'EEEE d MMMM',      // Tuesday 1 April
+    'EEEE, do MMMM',    // Sunday, 12th April  (Cinema Nova)
+    'EEEE, do MMMM yyyy', // Sunday, 12th April 2026
+    'd MMMM',           // 1 April
+    'd MMM',            // 1 Apr
+    'MMM d',            // Apr 1
     'MM/dd/yyyy',
     'dd/MM/yyyy',
   ]
@@ -56,8 +58,8 @@ export function parseTime(raw: string | undefined | null): string | null {
   if (!raw) return null
   const s = raw.trim()
 
-  // 24-hour: "19:30"
-  const h24 = s.match(/^(\d{1,2}):(\d{2})$/)
+  // 24-hour: "19:30" or "16:50 Event" (trailing text ignored)
+  const h24 = s.match(/^(\d{1,2}):(\d{2})/)
   if (h24) {
     const h = parseInt(h24[1], 10)
     const m = parseInt(h24[2], 10)

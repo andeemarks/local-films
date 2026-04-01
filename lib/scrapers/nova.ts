@@ -37,19 +37,17 @@ async function scrapeFilmPage(url: string): Promise<Film | null> {
   const sessions: Session[] = []
   let currentDate: string | null = null
 
-  // Walk every element in the document. Dates appear as text in elements that
-  // contain no ticketing link children; ticketing links are the session anchors.
+  // Walk every element in document order.
+  // - Session links: a[href*="visSelectTickets"] — may have child <p> so don't restrict to leaves
+  // - Dates: leaf text nodes only (no child elements)
   $('*').each((_, el) => {
     const $el = $(el)
-
-    // Skip elements that contain child elements (only want leaf text nodes)
-    if ($el.children('*').length > 0) return
-
     const href = $el.attr('href') ?? ''
-    if (href.includes('ticketing.cinemanova.com.au')) {
-      // This is a session link
+
+    if (href.includes('visSelectTickets')) {
       if (!currentDate) return
-      const timeText = $el.text().trim()
+      // Time may be in a child <p>; take the first whitespace-delimited token
+      const timeText = $el.text().trim().split(/\s+/)[0]
       const time = parseTime(timeText)
       if (!time) return
       sessions.push({
@@ -60,8 +58,8 @@ async function scrapeFilmPage(url: string): Promise<Film | null> {
         bookingUrl: href,
         flags: [],
       })
-    } else {
-      // Check if this element's text looks like a date
+    } else if ($el.children('*').length === 0) {
+      // Leaf node — check if text looks like a date
       const text = $el.text().trim()
       if (!text || text.length > 40) return
       const parsed = parseDate(text)
