@@ -6,6 +6,12 @@ import { format, parse, isValid, addDays } from 'date-fns'
 
 export const NEARING_END_DAYS = 3
 export const SESSION_WINDOW_DAYS = 60
+const TZ = 'Australia/Melbourne'
+
+/** Returns today's date as "YYYY-MM-DD" in Melbourne local time. */
+export function localToday(): string {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(new Date())
+}
 
 /**
  * Attempt to parse a fuzzy date string into an ISO "YYYY-MM-DD" string.
@@ -33,7 +39,7 @@ export function parseDate(raw: string | undefined | null): string | null {
     'dd/MM/yyyy',
   ]
 
-  const now = new Date()
+  const now = parse(localToday(), 'yyyy-MM-dd', new Date())
   for (const fmt of formats) {
     try {
       let d = parse(s, fmt, now)
@@ -109,7 +115,7 @@ export function formatRuntime(raw: string | undefined | null): number | null {
  */
 export function computeNearingEndOfRun(sessions: { date: string }[]): boolean {
   if (sessions.length === 0) return false
-  const today = format(new Date(), 'yyyy-MM-dd')
+  const today = localToday()
   const lastDate = sessions.map((s) => s.date).sort().at(-1)!
   const cutoff = format(addDays(new Date(), NEARING_END_DAYS), 'yyyy-MM-dd')
   return lastDate >= today && lastDate <= cutoff

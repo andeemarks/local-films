@@ -5,8 +5,8 @@
 
 import { chromium } from 'playwright'
 import type { Film, ScrapeResult } from '../types'
-import { computeNearingEndOfRun, SESSION_WINDOW_DAYS } from '../scraper-utils'
-import { format, addDays } from 'date-fns'
+import { computeNearingEndOfRun, SESSION_WINDOW_DAYS, localToday } from '../scraper-utils'
+import { format, addDays, parse as parseDate } from 'date-fns'
 import { scrapeNova } from './nova'
 import { scrapeAstor } from './astor'
 import { scrapeSun } from './sun'
@@ -45,9 +45,9 @@ export async function scrapeAll(): Promise<ScrapeResult> {
     console.warn(`Scrape completed with ${errors.length} error(s):\n  ${errors.join('\n  ')}`)
   }
 
-  // Drop sessions outside the 2-week window
-  const today = format(new Date(), 'yyyy-MM-dd')
-  const cutoff = format(addDays(new Date(), SESSION_WINDOW_DAYS), 'yyyy-MM-dd')
+  // Drop sessions outside the window; use Melbourne local date so GitHub Actions (UTC) is correct
+  const today = localToday()
+  const cutoff = format(addDays(parseDate(today, 'yyyy-MM-dd', new Date()), SESSION_WINDOW_DAYS), 'yyyy-MM-dd')
   for (const film of allFilms) {
     film.sessions = film.sessions.filter((s) => s.date >= today && s.date <= cutoff)
   }
