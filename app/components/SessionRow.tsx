@@ -41,9 +41,17 @@ function formatRuntime(mins: number | null): string | null {
   return h > 0 ? `${h}h${m > 0 ? ` ${m}m` : ''}` : `${m}m`
 }
 
+function isStartingWithinHour(date: string, time: string): boolean {
+  const sessionTime = new Date(`${date}T${time}`)
+  const now = new Date()
+  const diffMs = sessionTime.getTime() - now.getTime()
+  return diffMs >= 0 && diffMs <= 60 * 60 * 1000
+}
+
 export default function SessionRow({ session }: Props) {
   const cinema = CINEMAS[session.cinemaId]
   const colour = CINEMA_COLOURS[session.cinemaId] ?? 'bg-zinc-100 text-zinc-700'
+  const startingSoon = isStartingWithinHour(session.date, session.time)
 
   const meta = [
     formatRuntime(session.filmRuntimeMinutes),
@@ -51,7 +59,7 @@ export default function SessionRow({ session }: Props) {
   ].filter(Boolean).join(' · ')
 
   const inner = (
-    <div className="flex items-center gap-2 py-1.5 px-3 hover:bg-zinc-50 transition-colors">
+    <div className={`flex items-center gap-2 py-1.5 px-3 transition-colors ${startingSoon ? 'bg-amber-50 hover:bg-amber-100' : 'hover:bg-zinc-50'}`}>
       {/* Time */}
       <span className="w-14 shrink-0 text-sm font-semibold tabular-nums text-zinc-800">
         {formatTime(session.time)}
