@@ -84,7 +84,7 @@ export default function SessionRow({ session }: Props) {
       </span>
 
       {/* Cinema badge */}
-      <span className={`shrink-0 rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
+      <span className={`w-24 shrink-0 rounded px-1.5 py-0.5 text-xs font-medium text-center ${colour}`}>
         {cinema.name}
       </span>
 
