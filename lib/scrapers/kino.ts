@@ -12,7 +12,7 @@
  */
 
 import type { Film, Session } from '../types'
-import { localToday } from '../scraper-utils'
+import { localToday, SESSION_WINDOW_DAYS } from '../scraper-utils'
 import { addDays, format } from 'date-fns'
 
 const API_BASE = 'https://prod-api.palace-cinemas.workers.dev'
@@ -34,7 +34,7 @@ async function fetchJson(url: string): Promise<unknown> {
 /** Generate the date range to scrape: today + SESSION_WINDOW_DAYS days. */
 function getDateRange(): string[] {
   const today = localToday()
-  return Array.from({ length: 60 }, (_, i) =>
+  return Array.from({ length: SESSION_WINDOW_DAYS }, (_, i) =>
     format(addDays(new Date(today), i), 'yyyy-MM-dd')
   )
 }

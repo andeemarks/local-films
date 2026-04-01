@@ -20,6 +20,23 @@ function formatDayHeading(iso: string): string {
   })
 }
 
+type TimeOfDay = 'morning' | 'afternoon' | 'evening'
+
+function timeOfDay(time: string): TimeOfDay {
+  const h = parseInt(time.split(':')[0], 10)
+  if (h < 12) return 'morning'
+  if (h < 18) return 'afternoon'
+  return 'evening'
+}
+
+const TIME_OF_DAY_LABELS: Record<TimeOfDay, string> = {
+  morning: 'Morning',
+  afternoon: 'Afternoon',
+  evening: 'Evening',
+}
+
+const TIME_OF_DAY_ORDER: TimeOfDay[] = ['morning', 'afternoon', 'evening']
+
 export default function FilmList({ films }: Props) {
   const [activeCinemas, setActiveCinemas] = useState<CinemaId[]>(ALL_CINEMAS)
   const [showNearingEnd, setShowNearingEnd] = useState(false)
@@ -77,16 +94,36 @@ export default function FilmList({ films }: Props) {
         <div className="mt-4 space-y-4">
           {days.map(({ date, sessions }) => (
             <section key={date}>
-              <h2 className="mb-1 text-xs font-semibold uppercase tracking-wide text-zinc-400">
+              <h2 className="mb-2 text-base font-bold text-zinc-800">
                 {formatDayHeading(date)}
-                <span className="ml-2 font-normal normal-case text-zinc-300">
+                <span className="ml-2 text-sm font-normal text-zinc-400">
                   {sessions.length} session{sessions.length !== 1 ? 's' : ''}
                 </span>
               </h2>
-              <div className="rounded-xl border border-zinc-200 bg-white shadow-sm divide-y divide-zinc-100">
-                {sessions.map((s, i) => (
-                  <SessionRow key={`${s.cinemaId}-${s.date}-${s.time}-${i}`} session={s} />
-                ))}
+              <div className="rounded-xl border border-zinc-200 bg-white shadow-sm overflow-hidden">
+                {(() => {
+                  const groups = new Map<TimeOfDay, SessionWithFilm[]>()
+                  for (const s of sessions) {
+                    const tod = timeOfDay(s.time)
+                    const g = groups.get(tod) ?? []
+                    g.push(s)
+                    groups.set(tod, g)
+                  }
+                  return TIME_OF_DAY_ORDER.filter((tod) => groups.has(tod)).map((tod, gi) => (
+                    <div key={tod} className={gi > 0 ? 'border-t-2 border-zinc-200' : ''}>
+                      <div className="px-3 py-1 bg-zinc-50 border-b border-zinc-100">
+                        <span className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
+                          {TIME_OF_DAY_LABELS[tod]}
+                        </span>
+                      </div>
+                      <div className="divide-y divide-zinc-100">
+                        {groups.get(tod)!.map((s, i) => (
+                          <SessionRow key={`${s.cinemaId}-${s.date}-${s.time}-${i}`} session={s} />
+                        ))}
+                      </div>
+                    </div>
+                  ))
+                })()}
               </div>
             </section>
           ))}

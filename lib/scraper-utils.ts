@@ -5,7 +5,7 @@
 import { format, parse, isValid, addDays } from 'date-fns'
 
 export const NEARING_END_DAYS = 3
-export const SESSION_WINDOW_DAYS = 60
+export const SESSION_WINDOW_DAYS = 7
 const TZ = 'Australia/Melbourne'
 
 /** Returns today's date as "YYYY-MM-DD" in Melbourne local time. */
