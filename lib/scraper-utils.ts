@@ -64,8 +64,8 @@ export function parseTime(raw: string | undefined | null): string | null {
   if (!raw) return null
   const s = raw.trim()
 
-  // 24-hour: "19:30" or "16:50 Event" (trailing text ignored)
-  const h24 = s.match(/^(\d{1,2}):(\d{2})/)
+  // 24-hour: "19:30" or "16:50 Event" (trailing text ignored); negative lookahead excludes am/pm
+  const h24 = s.match(/^(\d{1,2}):(\d{2})(?!\s*(?:am|pm))/i)
   if (h24) {
     const h = parseInt(h24[1], 10)
     const m = parseInt(h24[2], 10)
