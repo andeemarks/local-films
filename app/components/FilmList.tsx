@@ -98,7 +98,7 @@ export default function FilmList({ films }: Props) {
         <div className="mt-1 space-y-2">
           {days.map(({ date, sessions }) => (
             <section key={date}>
-              <div className="rounded-xl border border-zinc-200 bg-white shadow-sm overflow-hidden">
+              <div className="rounded-xl border border-zinc-200 bg-white shadow-sm overflow-clip">
                 {(() => {
                   const groups = new Map<TimeOfDay, SessionWithFilm[]>()
                   for (const s of sessions) {
@@ -109,7 +109,7 @@ export default function FilmList({ films }: Props) {
                   }
                   return TIME_OF_DAY_ORDER.filter((tod) => groups.has(tod)).map((tod, gi) => (
                     <div key={tod} className={gi > 0 ? 'border-t-2 border-zinc-200' : ''}>
-                      <div className="px-3 py-px bg-zinc-50 border-b border-zinc-100">
+                      <div className="sticky top-0 z-10 px-3 py-px bg-zinc-50 border-b border-zinc-100">
                         <span className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
                           {formatDayHeading(date)} · {TIME_OF_DAY_LABELS[tod]}
                         </span>
