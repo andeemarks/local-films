@@ -34,13 +34,6 @@ export function formatTime(time: string): string {
   return `${h}:${String(m).padStart(2, '0')}${meridiem}`
 }
 
-function formatRuntime(mins: number | null): string | null {
-  if (!mins) return null
-  const h = Math.floor(mins / 60)
-  const m = mins % 60
-  return h > 0 ? `${h}h${m > 0 ? ` ${m}m` : ''}` : `${m}m`
-}
-
 function novaMondayPrice(cinemaId: string, date: string, time: string): string | null {
   if (cinemaId !== 'nova') return null
   const day = new Date(`${date}T00:00:00`).getDay() // 0=Sun, 1=Mon
@@ -78,27 +71,22 @@ export function SessionCard({ session, className = '' }: { session: SessionWithF
   const promoPrice = getPromoPrice(session.cinemaId, session.date, session.time)
   const displayPrice = session.ticketPrice ?? promoPrice
 
-  const meta = [
-    formatRuntime(session.filmRuntimeMinutes),
-    session.filmRating,
-  ].filter(Boolean).join(' · ')
-
   const content = (
-    <div className={`flex items-center gap-2 py-1 px-2 rounded transition-colors ${promoPrice ? 'hover:bg-sky-100' : 'hover:bg-zinc-100'}`}>
-      <span className={`w-24 shrink-0 rounded px-1.5 py-0.5 text-xs font-medium text-center ${colour}`}>
+    <div className={`flex flex-col gap-1 py-1.5 px-2 rounded transition-colors ${promoPrice ? 'hover:bg-sky-100' : 'hover:bg-zinc-100'}`}>
+      <div className="flex items-baseline gap-1.5 min-w-0">
+        <span className="text-sm font-medium text-zinc-900 truncate">{toSentenceCase(session.filmTitle)}</span>
+        {session.filmRating && <span className="shrink-0 text-xs text-zinc-400">({session.filmRating})</span>}
+      </div>
+      <span className={`self-start rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
         {cinema.name}
       </span>
-      <div className="flex-1 min-w-0 flex items-baseline gap-2">
-        <span className="text-sm font-medium text-zinc-900 truncate">{toSentenceCase(session.filmTitle)}</span>
-        {meta && <span className="shrink-0 text-xs text-zinc-400">{meta}</span>}
-      </div>
+      {displayPrice && (
+        <span className={`text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
+      )}
       {session.isNearingEndOfRun && (
-        <span className="shrink-0 rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-600 ring-1 ring-red-200">
+        <span className="self-start rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-600 ring-1 ring-red-200">
           Last few days
         </span>
-      )}
-      {displayPrice && (
-        <span className={`shrink-0 text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
       )}
     </div>
   )
@@ -120,31 +108,28 @@ export default function SessionRow({ session }: Props) {
   const promoPrice = getPromoPrice(session.cinemaId, session.date, session.time)
   const displayPrice = session.ticketPrice ?? promoPrice
 
-  const meta = [
-    formatRuntime(session.filmRuntimeMinutes),
-    session.filmRating,
-  ].filter(Boolean).join(' · ')
-
   const inner = (
-    <div className={`flex items-center gap-2 py-1.5 px-3 transition-colors ${startingSoon ? 'bg-amber-50 hover:bg-amber-100' : promoPrice ? 'bg-sky-50 hover:bg-sky-100' : 'hover:bg-zinc-50'}`}>
-      <span className="w-14 shrink-0 text-sm font-semibold tabular-nums text-zinc-800">
+    <div className={`flex items-start gap-2 py-2 px-3 transition-colors ${startingSoon ? 'bg-amber-50 hover:bg-amber-100' : promoPrice ? 'bg-sky-50 hover:bg-sky-100' : 'hover:bg-zinc-50'}`}>
+      <span className="w-14 shrink-0 pt-0.5 text-sm font-semibold tabular-nums text-zinc-800">
         {formatTime(session.time)}
       </span>
-      <span className={`w-24 shrink-0 rounded px-1.5 py-0.5 text-xs font-medium text-center ${colour}`}>
-        {cinema.name}
-      </span>
-      <div className="flex-1 min-w-0 flex items-baseline gap-2">
-        <span className="text-sm font-medium text-zinc-900 truncate">{toSentenceCase(session.filmTitle)}</span>
-        {meta && <span className="shrink-0 text-xs text-zinc-400">{meta}</span>}
-      </div>
-      {session.isNearingEndOfRun && (
-        <span className="shrink-0 rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-600 ring-1 ring-red-200">
-          Last few days
+      <div className="flex-1 min-w-0 flex flex-col gap-1">
+        <div className="flex items-baseline gap-1.5 min-w-0">
+          <span className="text-sm font-medium text-zinc-900 truncate">{toSentenceCase(session.filmTitle)}</span>
+          {session.filmRating && <span className="shrink-0 text-xs text-zinc-400">({session.filmRating})</span>}
+        </div>
+        <span className={`self-start rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
+          {cinema.name}
         </span>
-      )}
-      {displayPrice && (
-        <span className={`shrink-0 text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
-      )}
+        {displayPrice && (
+          <span className={`text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
+        )}
+        {session.isNearingEndOfRun && (
+          <span className="self-start rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-600 ring-1 ring-red-200">
+            Last few days
+          </span>
+        )}
+      </div>
     </div>
   )
 
