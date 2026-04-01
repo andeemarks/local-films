@@ -48,7 +48,7 @@ function kinoDiscountPrice(cinemaId: string, date: string): string | null {
   return day === 1 || day === 2 ? '$10' : null
 }
 
-function isStartingWithinHour(date: string, time: string): boolean {
+export function isStartingWithinHour(date: string, time: string): boolean {
   const sessionTime = new Date(`${date}T${time}`)
   const now = new Date()
   const diffMs = sessionTime.getTime() - now.getTime()
@@ -60,7 +60,7 @@ function toSentenceCase(s: string): string {
   return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()
 }
 
-function getPromoPrice(cinemaId: string, date: string, time: string): string | null {
+export function getPromoPrice(cinemaId: string, date: string, time: string): string | null {
   return novaMondayPrice(cinemaId, date, time) ?? kinoDiscountPrice(cinemaId, date)
 }
 

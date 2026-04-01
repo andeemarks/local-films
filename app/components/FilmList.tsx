@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import type { Film, CinemaId } from '@/lib/types'
-import SessionRow, { SessionCard, formatTime, type SessionWithFilm } from './SessionRow'
+import SessionRow, { SessionCard, formatTime, isStartingWithinHour, getPromoPrice, type SessionWithFilm } from './SessionRow'
 import Filters from './Filters'
 
 const ALL_CINEMAS: CinemaId[] = ['kino', 'nova', 'astor', 'sun']
@@ -132,7 +132,7 @@ export default function FilmList({ films }: Props) {
                                 return <SessionRow key={`${s.cinemaId}-${s.date}-${time}`} session={s} />
                               }
                               return (
-                                <div key={time} className="flex items-start gap-2 py-1.5 px-3 hover:bg-zinc-50 transition-colors">
+                                <div key={time} className={`flex items-start gap-2 py-1.5 px-3 transition-colors ${slotSessions.some(s => isStartingWithinHour(s.date, s.time)) ? 'bg-amber-50 hover:bg-amber-100' : slotSessions.some(s => getPromoPrice(s.cinemaId, s.date, s.time)) ? 'bg-sky-50 hover:bg-sky-100' : 'hover:bg-zinc-50'}`}>
                                   <span className="w-14 shrink-0 pt-1.5 text-sm font-semibold tabular-nums text-zinc-800">
                                     {formatTime(time)}
                                   </span>
