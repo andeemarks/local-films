@@ -55,6 +55,10 @@ export function isStartingWithinHour(date: string, time: string): boolean {
   return diffMs >= 0 && diffMs <= 60 * 60 * 1000
 }
 
+export function isAlreadyStarted(date: string, time: string): boolean {
+  return new Date(`${date}T${time}`).getTime() < Date.now()
+}
+
 function toSentenceCase(s: string): string {
   if (!s) return s
   return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()
@@ -104,6 +108,7 @@ export function SessionCard({ session, className = '' }: { session: SessionWithF
 export default function SessionRow({ session }: Props) {
   const cinema = CINEMAS[session.cinemaId]
   const colour = CINEMA_COLOURS[session.cinemaId] ?? 'bg-zinc-100 text-zinc-700'
+  const started = isAlreadyStarted(session.date, session.time)
   const startingSoon = isStartingWithinHour(session.date, session.time)
   const promoPrice = getPromoPrice(session.cinemaId, session.date, session.time)
   const displayPrice = session.ticketPrice ?? promoPrice
@@ -135,11 +140,11 @@ export default function SessionRow({ session }: Props) {
 
   if (session.bookingUrl) {
     return (
-      <a href={session.bookingUrl} target="_blank" rel="noopener noreferrer" className="block">
+      <a href={session.bookingUrl} target="_blank" rel="noopener noreferrer" className={`block${started ? ' opacity-40' : ''}`}>
         {inner}
       </a>
     )
   }
 
-  return <div>{inner}</div>
+  return <div className={started ? 'opacity-40' : ''}>{inner}</div>
 }
