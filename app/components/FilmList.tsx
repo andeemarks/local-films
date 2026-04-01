@@ -111,7 +111,7 @@ export default function FilmList({ films }: Props) {
                     <div key={tod} className={gi > 0 ? 'border-t-2 border-zinc-200' : ''}>
                       <div className="px-3 py-px bg-zinc-50 border-b border-zinc-100">
                         <span className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
-                          {gi === 0 && <>{formatDayHeading(date)} · </>}{TIME_OF_DAY_LABELS[tod]}
+                          {formatDayHeading(date)} · {TIME_OF_DAY_LABELS[tod]}
                         </span>
                       </div>
                       <div className="divide-y divide-zinc-100">
