@@ -76,22 +76,24 @@ export function SessionCard({ session, className = '' }: { session: SessionWithF
   const displayPrice = session.ticketPrice ?? promoPrice
 
   const content = (
-    <div className={`flex flex-col gap-1 py-1.5 px-2 rounded transition-colors ${promoPrice ? 'hover:bg-sky-100' : 'hover:bg-zinc-100'}`}>
+    <div className={`flex flex-col gap-0.5 py-0.5 px-2 rounded transition-colors ${promoPrice ? 'hover:bg-sky-100' : 'hover:bg-zinc-100'}`}>
       <div className="flex items-baseline gap-1.5 min-w-0">
         <span className="text-sm font-medium text-zinc-900 truncate">{toSentenceCase(session.filmTitle)}</span>
         {session.filmRating && <span className="shrink-0 text-xs text-zinc-400">({session.filmRating})</span>}
       </div>
-      <span className={`self-start rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
-        {cinema.name}
-      </span>
-      {displayPrice && (
-        <span className={`text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
-      )}
-      {session.isNearingEndOfRun && (
-        <span className="self-start rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-600 ring-1 ring-red-200">
-          Last few days
+      <div className="flex items-center gap-2 flex-wrap">
+        <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
+          {cinema.name}
         </span>
-      )}
+        {displayPrice && (
+          <span className={`text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
+        )}
+        {session.isNearingEndOfRun && (
+          <span className="rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-600 ring-1 ring-red-200">
+            Last few days
+          </span>
+        )}
+      </div>
     </div>
   )
 
@@ -114,26 +116,28 @@ export default function SessionRow({ session }: Props) {
   const displayPrice = session.ticketPrice ?? promoPrice
 
   const inner = (
-    <div className={`flex items-start gap-2 py-2 px-3 transition-colors ${startingSoon ? 'bg-amber-50 hover:bg-amber-100' : promoPrice ? 'bg-sky-50 hover:bg-sky-100' : 'hover:bg-zinc-50'}`}>
+    <div className={`flex items-start gap-2 py-0.5 px-3 transition-colors ${startingSoon ? 'bg-amber-50 hover:bg-amber-100' : promoPrice ? 'bg-sky-50 hover:bg-sky-100' : 'hover:bg-zinc-50'}`}>
       <span className="w-14 shrink-0 pt-0.5 text-sm font-semibold tabular-nums text-zinc-800">
         {formatTime(session.time)}
       </span>
-      <div className="flex-1 min-w-0 flex flex-col gap-1">
+      <div className="flex-1 min-w-0 flex flex-col gap-0.5">
         <div className="flex items-baseline gap-1.5 min-w-0">
           <span className="text-sm font-medium text-zinc-900 truncate">{toSentenceCase(session.filmTitle)}</span>
           {session.filmRating && <span className="shrink-0 text-xs text-zinc-400">({session.filmRating})</span>}
         </div>
-        <span className={`self-start rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
-          {cinema.name}
-        </span>
-        {displayPrice && (
-          <span className={`text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
-        )}
-        {session.isNearingEndOfRun && (
-          <span className="self-start rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-600 ring-1 ring-red-200">
-            Last few days
+        <div className="flex items-center gap-2 flex-wrap">
+          <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
+            {cinema.name}
           </span>
-        )}
+          {displayPrice && (
+            <span className={`text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
+          )}
+          {session.isNearingEndOfRun && (
+            <span className="rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-600 ring-1 ring-red-200">
+              Last few days
+            </span>
+          )}
+        </div>
       </div>
     </div>
   )

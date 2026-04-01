@@ -91,10 +91,10 @@ export default function FilmList({ films }: Props) {
       {days.length === 0 ? (
         <p className="mt-12 text-center text-zinc-400">No sessions match your filters.</p>
       ) : (
-        <div className="mt-4 space-y-4">
+        <div className="mt-1 space-y-1">
           {days.map(({ date, sessions }) => (
             <section key={date}>
-              <h2 className="mb-2 text-base font-bold text-zinc-800">
+              <h2 className="mb-0.5 text-base font-bold text-zinc-800">
                 {formatDayHeading(date)}
                 <span className="ml-2 text-sm font-normal text-zinc-400">
                   {sessions.length} session{sessions.length !== 1 ? 's' : ''}
@@ -111,7 +111,7 @@ export default function FilmList({ films }: Props) {
                   }
                   return TIME_OF_DAY_ORDER.filter((tod) => groups.has(tod)).map((tod, gi) => (
                     <div key={tod} className={gi > 0 ? 'border-t-2 border-zinc-200' : ''}>
-                      <div className="px-3 py-1 bg-zinc-50 border-b border-zinc-100">
+                      <div className="px-3 py-px bg-zinc-50 border-b border-zinc-100">
                         <span className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
                           {TIME_OF_DAY_LABELS[tod]}
                         </span>
@@ -133,7 +133,7 @@ export default function FilmList({ films }: Props) {
                               }
                               const slotStarted = isAlreadyStarted(slotSessions[0].date, time)
                               return (
-                                <div key={time} className={`flex items-start gap-2 py-1.5 px-3 transition-colors${slotStarted ? ' opacity-40' : ''} ${slotSessions.some(s => isStartingWithinHour(s.date, s.time)) ? 'bg-amber-50 hover:bg-amber-100' : slotSessions.some(s => getPromoPrice(s.cinemaId, s.date, s.time)) ? 'bg-sky-50 hover:bg-sky-100' : 'hover:bg-zinc-50'}`}>
+                                <div key={time} className={`flex items-start gap-2 py-1 px-3 transition-colors${slotStarted ? ' opacity-40' : ''} ${slotSessions.some(s => isStartingWithinHour(s.date, s.time)) ? 'bg-amber-50 hover:bg-amber-100' : slotSessions.some(s => getPromoPrice(s.cinemaId, s.date, s.time)) ? 'bg-sky-50 hover:bg-sky-100' : 'hover:bg-zinc-50'}`}>
                                   <span className="w-14 shrink-0 pt-1.5 text-sm font-semibold tabular-nums text-zinc-800">
                                     {formatTime(time)}
                                   </span>
