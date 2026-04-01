@@ -106,7 +106,7 @@ export function SessionCard({ session, className = '' }: { session: SessionWithF
   const displayPrice = session.ticketPrice ?? promoPrice
 
   const content = (
-    <div className={`flex flex-col gap-0.5 py-0.5 px-2 rounded transition-colors ${promoPrice ? 'hover:bg-sky-100' : 'hover:bg-zinc-100'}`}>
+    <div className={`flex flex-col gap-0.5 py-0.5 rounded transition-colors ${promoPrice ? 'hover:bg-sky-100' : 'hover:bg-zinc-100'}`}>
       <SessionBody session={session} promoPrice={promoPrice} displayPrice={displayPrice} />
     </div>
   )
