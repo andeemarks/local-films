@@ -49,6 +49,12 @@ function novaMondayPrice(cinemaId: string, date: string, time: string): string |
   return parseInt(hStr, 10) < 16 ? '$8' : '$11'
 }
 
+function kinoDiscountPrice(cinemaId: string, date: string): string | null {
+  if (cinemaId !== 'kino') return null
+  const day = new Date(`${date}T00:00:00`).getDay() // 1=Mon, 2=Tue
+  return day === 1 || day === 2 ? '$10' : null
+}
+
 function isStartingWithinHour(date: string, time: string): boolean {
   const sessionTime = new Date(`${date}T${time}`)
   const now = new Date()
@@ -61,7 +67,9 @@ export default function SessionRow({ session }: Props) {
   const colour = CINEMA_COLOURS[session.cinemaId] ?? 'bg-zinc-100 text-zinc-700'
   const startingSoon = isStartingWithinHour(session.date, session.time)
   const mondayPrice = novaMondayPrice(session.cinemaId, session.date, session.time)
-  const displayPrice = session.ticketPrice ?? mondayPrice
+  const kinoPrice = kinoDiscountPrice(session.cinemaId, session.date)
+  const promoPrice = mondayPrice ?? kinoPrice
+  const displayPrice = session.ticketPrice ?? promoPrice
 
   const meta = [
     formatRuntime(session.filmRuntimeMinutes),
@@ -69,7 +77,7 @@ export default function SessionRow({ session }: Props) {
   ].filter(Boolean).join(' · ')
 
   const inner = (
-    <div className={`flex items-center gap-2 py-1.5 px-3 transition-colors ${startingSoon ? 'bg-amber-50 hover:bg-amber-100' : mondayPrice ? 'bg-sky-50 hover:bg-sky-100' : 'hover:bg-zinc-50'}`}>
+    <div className={`flex items-center gap-2 py-1.5 px-3 transition-colors ${startingSoon ? 'bg-amber-50 hover:bg-amber-100' : promoPrice ? 'bg-sky-50 hover:bg-sky-100' : 'hover:bg-zinc-50'}`}>
       {/* Time */}
       <span className="w-14 shrink-0 text-sm font-semibold tabular-nums text-zinc-800">
         {formatTime(session.time)}
@@ -95,7 +103,7 @@ export default function SessionRow({ session }: Props) {
 
       {/* Ticket price */}
       {displayPrice && (
-        <span className={`shrink-0 text-sm font-medium ${mondayPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
+        <span className={`shrink-0 text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
       )}
     </div>
   )
