@@ -5,8 +5,6 @@ import type { Film, CinemaId } from '@/lib/types'
 import SessionRow, { SessionCard, formatTime, isStartingWithinHour, isAlreadyStarted, getPromoPrice, type SessionWithFilm } from './SessionRow'
 import Filters from './Filters'
 
-const ALL_CINEMAS: CinemaId[] = ['kino', 'nova', 'astor', 'sun']
-
 interface Props {
   films: Film[]
 }
@@ -43,6 +41,8 @@ function slotBg(slotSessions: SessionWithFilm[]): string {
   return 'hover:bg-zinc-50'
 }
 
+const ALL_CINEMAS: CinemaId[] = ['kino', 'nova', 'astor', 'sun']
+
 export default function FilmList({ films }: Props) {
   const [activeCinemas, setActiveCinemas] = useState<CinemaId[]>(ALL_CINEMAS)
   const [showNearingEnd, setShowNearingEnd] = useState(false)
@@ -53,7 +53,6 @@ export default function FilmList({ films }: Props) {
     )
   }
 
-  // Flatten all sessions into SessionWithFilm[]
   const allSessions: SessionWithFilm[] = films.flatMap((film) =>
     film.sessions.map((s) => ({
       ...s,
@@ -91,21 +90,14 @@ export default function FilmList({ films }: Props) {
         onToggleCinema={toggleCinema}
         showNearingEnd={showNearingEnd}
         onToggleNearingEnd={() => setShowNearingEnd((v) => !v)}
-        sessionCount={filtered.length}
       />
 
       {days.length === 0 ? (
         <p className="mt-12 text-center text-zinc-400">No sessions match your filters.</p>
       ) : (
-        <div className="mt-1 space-y-1">
+        <div className="mt-1 space-y-2">
           {days.map(({ date, sessions }) => (
             <section key={date}>
-              <h2 className="mb-0.5 text-base font-bold text-zinc-800">
-                {formatDayHeading(date)}
-                <span className="ml-2 text-sm font-normal text-zinc-400">
-                  {sessions.length} session{sessions.length !== 1 ? 's' : ''}
-                </span>
-              </h2>
               <div className="rounded-xl border border-zinc-200 bg-white shadow-sm overflow-hidden">
                 {(() => {
                   const groups = new Map<TimeOfDay, SessionWithFilm[]>()
@@ -119,7 +111,7 @@ export default function FilmList({ films }: Props) {
                     <div key={tod} className={gi > 0 ? 'border-t-2 border-zinc-200' : ''}>
                       <div className="px-3 py-px bg-zinc-50 border-b border-zinc-100">
                         <span className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
-                          {TIME_OF_DAY_LABELS[tod]}
+                          {gi === 0 && <>{formatDayHeading(date)} · </>}{TIME_OF_DAY_LABELS[tod]}
                         </span>
                       </div>
                       <div className="divide-y divide-zinc-100">
