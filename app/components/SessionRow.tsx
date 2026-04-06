@@ -17,6 +17,13 @@ interface Props {
   session: SessionWithFilm
 }
 
+const CINEMA_SHORT_NAMES: Record<string, string> = {
+  kino:  'Kino',
+  nova:  'Nova',
+  astor: 'Astor',
+  sun:   'Sun',
+}
+
 const CINEMA_COLOURS: Record<string, string> = {
   kino:  'bg-violet-100 text-violet-700',
   nova:  'bg-sky-100 text-sky-700',
@@ -75,18 +82,17 @@ function SessionBody({ session, promoPrice, displayPrice }: {
   promoPrice: string | null
   displayPrice: string | null
 }) {
-  const cinema = CINEMAS[session.cinemaId]
+  const shortName = CINEMA_SHORT_NAMES[session.cinemaId] ?? CINEMAS[session.cinemaId].name
   const colour = CINEMA_COLOURS[session.cinemaId] ?? 'bg-zinc-100 text-zinc-700'
   return (
     <>
-      <div className="flex items-baseline gap-1.5 min-w-0">
-        <span className="text-sm font-medium text-zinc-900 truncate">{toSentenceCase(session.filmTitle)}</span>
-        {session.filmRating && <span className="shrink-0 text-xs text-zinc-400">({session.filmRating})</span>}
+      <div className="flex items-baseline gap-1.5 min-w-0 flex-wrap">
+        <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
+          {toSentenceCase(session.filmTitle)} ({shortName})
+        </span>
+        {session.filmRating && <span className="shrink-0 text-xs text-zinc-400">{session.filmRating}</span>}
       </div>
       <div className="flex items-center gap-2 flex-wrap">
-        <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
-          {cinema.name}
-        </span>
         {displayPrice && (
           <span className={`text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
         )}
