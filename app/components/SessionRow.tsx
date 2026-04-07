@@ -1,4 +1,4 @@
-import { CINEMAS, type CinemaId } from '@/lib/types'
+import { type CinemaId } from '@/lib/types'
 
 export interface SessionWithFilm {
   cinemaId: CinemaId
@@ -82,13 +82,12 @@ function SessionBody({ session, promoPrice, displayPrice }: {
   promoPrice: string | null
   displayPrice: string | null
 }) {
-  const shortName = CINEMA_SHORT_NAMES[session.cinemaId] ?? CINEMAS[session.cinemaId].name
   const colour = CINEMA_COLOURS[session.cinemaId] ?? 'bg-zinc-100 text-zinc-700'
   return (
     <>
       <div className="flex items-baseline gap-1.5 min-w-0 flex-wrap">
         <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
-          {toSentenceCase(session.filmTitle)} ({shortName})
+          {toSentenceCase(session.filmTitle)}
         </span>
         {session.filmRating && <span className="shrink-0 text-xs text-zinc-400">{session.filmRating}</span>}
       </div>
