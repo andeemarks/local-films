@@ -68,10 +68,6 @@ export function isAlreadyStarted(date: string, time: string): boolean {
   return sessionDateTime(date, time).getTime() < Date.now()
 }
 
-function toSentenceCase(s: string): string {
-  if (!s) return s
-  return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase()
-}
 
 export function getPromoPrice(cinemaId: string, date: string, time: string): string | null {
   return novaMondayPrice(cinemaId, date, time) ?? kinoDiscountPrice(cinemaId, date)
@@ -87,7 +83,7 @@ function SessionBody({ session, promoPrice, displayPrice }: {
     <>
       <div className="flex items-baseline gap-1.5 min-w-0 flex-wrap">
         <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
-          {toSentenceCase(session.filmTitle)}
+          {session.filmTitle.toUpperCase()}
         </span>
         {session.filmRating && <span className="shrink-0 text-xs text-zinc-400">{session.filmRating}</span>}
       </div>
