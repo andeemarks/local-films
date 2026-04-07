@@ -25,10 +25,10 @@ export const CINEMA_SHORT_NAMES: Record<string, string> = {
 }
 
 export const CINEMA_COLOURS: Record<string, string> = {
-  kino:  'bg-violet-100 text-violet-700',
-  nova:  'bg-sky-100 text-sky-700',
-  astor: 'bg-amber-100 text-amber-700',
-  sun:   'bg-emerald-100 text-emerald-700',
+  kino:  'bg-sky-100 text-sky-700',
+  nova:  'bg-violet-100 text-violet-700',
+  astor: 'bg-emerald-100 text-emerald-700',
+  sun:   'bg-amber-100 text-amber-700',
 }
 
 export function formatTime(time: string): string {

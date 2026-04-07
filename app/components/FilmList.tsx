@@ -35,7 +35,7 @@ const TIME_OF_DAY_LABELS: Record<TimeOfDay, string> = {
 
 const TIME_OF_DAY_ORDER: TimeOfDay[] = ['morning', 'afternoon', 'evening']
 
-const ALL_CINEMAS: CinemaId[] = ['kino', 'nova', 'astor', 'sun']
+const ALL_CINEMAS: CinemaId[] = ['kino', 'nova', 'sun', 'astor']
 
 export default function FilmList({ films }: Props) {
   const [activeCinemas, setActiveCinemas] = useState<CinemaId[]>(ALL_CINEMAS)
