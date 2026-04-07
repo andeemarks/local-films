@@ -17,14 +17,14 @@ interface Props {
   session: SessionWithFilm
 }
 
-const CINEMA_SHORT_NAMES: Record<string, string> = {
+export const CINEMA_SHORT_NAMES: Record<string, string> = {
   kino:  'Kino',
   nova:  'Nova',
   astor: 'Astor',
   sun:   'Sun',
 }
 
-const CINEMA_COLOURS: Record<string, string> = {
+export const CINEMA_COLOURS: Record<string, string> = {
   kino:  'bg-violet-100 text-violet-700',
   nova:  'bg-sky-100 text-sky-700',
   astor: 'bg-amber-100 text-amber-700',
