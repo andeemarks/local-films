@@ -109,7 +109,7 @@ export default function FilmList({ films }: Props) {
                     {orderedCinemas.map((id) => (
                       <div
                         key={id}
-                        className={`w-fit rounded px-1.5 py-0.5 text-xs font-semibold ${CINEMA_COLOURS[id]}`}
+                        className={`rounded px-1.5 py-0.5 text-xs font-semibold text-center ${CINEMA_COLOURS[id]}`}
                       >
                         {CINEMA_SHORT_NAMES[id]}
                       </div>
