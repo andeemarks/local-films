@@ -9,7 +9,7 @@ interface Props {
   onToggleNearingEnd: () => void
 }
 
-const CINEMA_ORDER: CinemaId[] = ['kino', 'nova', 'astor', 'sun']
+const CINEMA_ORDER: CinemaId[] = ['kino', 'nova', 'sun', 'astor']
 
 export default function Filters({
   activeCinemas,

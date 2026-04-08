@@ -17,14 +17,14 @@ interface Props {
   session: SessionWithFilm
 }
 
-export const CINEMA_SHORT_NAMES: Record<string, string> = {
+export const CINEMA_SHORT_NAMES: Record<CinemaId, string> = {
   kino:  'Kino',
   nova:  'Nova',
   astor: 'Astor',
   sun:   'Sun',
 }
 
-export const CINEMA_COLOURS: Record<string, string> = {
+export const CINEMA_COLOURS: Record<CinemaId, string> = {
   kino:  'bg-sky-100 text-sky-700',
   nova:  'bg-violet-100 text-violet-700',
   astor: 'bg-emerald-100 text-emerald-700',
@@ -45,7 +45,7 @@ function sessionDateTime(date: string, time: string): Date {
   return new Date(`${date}T${time}`)
 }
 
-function novaMondayPrice(cinemaId: string, date: string, time: string): string | null {
+function novaMondayPrice(cinemaId: CinemaId, date: string, time: string): string | null {
   if (cinemaId !== 'nova') return null
   const day = new Date(`${date}T00:00:00`).getDay() // 0=Sun, 1=Mon
   if (day !== 1) return null
@@ -53,7 +53,7 @@ function novaMondayPrice(cinemaId: string, date: string, time: string): string |
   return parseInt(hStr, 10) < 16 ? '$8' : '$11'
 }
 
-function kinoDiscountPrice(cinemaId: string, date: string): string | null {
+function kinoDiscountPrice(cinemaId: CinemaId, date: string): string | null {
   if (cinemaId !== 'kino') return null
   const day = new Date(`${date}T00:00:00`).getDay() // 1=Mon, 2=Tue
   return day === 1 || day === 2 ? '$10' : null
@@ -68,8 +68,7 @@ export function isAlreadyStarted(date: string, time: string): boolean {
   return sessionDateTime(date, time).getTime() < Date.now()
 }
 
-
-export function getPromoPrice(cinemaId: string, date: string, time: string): string | null {
+export function getPromoPrice(cinemaId: CinemaId, date: string, time: string): string | null {
   return novaMondayPrice(cinemaId, date, time) ?? kinoDiscountPrice(cinemaId, date)
 }
 

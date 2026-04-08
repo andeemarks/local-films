@@ -37,6 +37,83 @@ const TIME_OF_DAY_ORDER: TimeOfDay[] = ['morning', 'afternoon', 'evening']
 
 const ALL_CINEMAS: CinemaId[] = ['kino', 'nova', 'sun', 'astor']
 
+function DaySections({ sessions, orderedCinemas, date }: {
+  sessions: SessionWithFilm[]
+  orderedCinemas: CinemaId[]
+  date: string
+}) {
+  const groups = new Map<TimeOfDay, SessionWithFilm[]>()
+  for (const s of sessions) {
+    const tod = timeOfDay(s.time)
+    const g = groups.get(tod) ?? []
+    g.push(s)
+    groups.set(tod, g)
+  }
+
+  return (
+    <>
+      {TIME_OF_DAY_ORDER.filter((tod) => groups.has(tod)).map((tod, gi) => {
+        const byTimeCinema = new Map<string, Map<CinemaId, SessionWithFilm[]>>()
+        for (const s of groups.get(tod)!) {
+          if (!byTimeCinema.has(s.time)) byTimeCinema.set(s.time, new Map())
+          const cinemaMap = byTimeCinema.get(s.time)!
+          if (!cinemaMap.has(s.cinemaId)) cinemaMap.set(s.cinemaId, [])
+          cinemaMap.get(s.cinemaId)!.push(s)
+        }
+        return (
+          <div key={tod} className={gi > 0 ? 'border-t-2 border-zinc-200' : ''}>
+            <div className="px-3 py-px bg-zinc-50 border-b border-zinc-100">
+              <span className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
+                {TIME_OF_DAY_LABELS[tod]}
+              </span>
+            </div>
+            <div className="divide-y divide-zinc-100">
+              {Array.from(byTimeCinema.entries())
+                .sort(([a], [b]) => a.localeCompare(b))
+                .map(([time, cinemaMap]) => {
+                  let startingSoon = false
+                  let hasPromo = false
+                  for (const cinemaSessions of cinemaMap.values()) {
+                    for (const s of cinemaSessions) {
+                      if (!startingSoon && isStartingWithinHour(s.date, s.time)) startingSoon = true
+                      if (!hasPromo && getPromoPrice(s.cinemaId, s.date, s.time)) hasPromo = true
+                      if (startingSoon && hasPromo) break
+                    }
+                    if (startingSoon && hasPromo) break
+                  }
+                  const started = isAlreadyStarted(date, time)
+                  const rowBg = startingSoon
+                    ? 'bg-amber-50 hover:bg-amber-100'
+                    : hasPromo
+                      ? 'bg-sky-50 hover:bg-sky-100'
+                      : 'hover:bg-zinc-50'
+                  return (
+                    <div
+                      key={time}
+                      className={`grid items-start py-1 px-3 transition-colors ${rowBg}${started ? ' opacity-40' : ''}`}
+                      style={{ gridTemplateColumns: `3.5rem repeat(${orderedCinemas.length}, 1fr)` }}
+                    >
+                      <span className="pt-1 text-sm font-semibold tabular-nums text-zinc-800">
+                        {formatTime(time)}
+                      </span>
+                      {orderedCinemas.map((id) => (
+                        <div key={id} className="flex flex-col gap-0.5">
+                          {(cinemaMap.get(id) ?? []).map((s, i) => (
+                            <SessionCard key={i} session={s} />
+                          ))}
+                        </div>
+                      ))}
+                    </div>
+                  )
+                })}
+            </div>
+          </div>
+        )
+      })}
+    </>
+  )
+}
+
 export default function FilmList({ films }: Props) {
   const [activeCinemas, setActiveCinemas] = useState<CinemaId[]>(ALL_CINEMAS)
   const [showNearingEnd, setShowNearingEnd] = useState(false)
@@ -94,7 +171,6 @@ export default function FilmList({ films }: Props) {
           {days.map(({ date, sessions }) => (
             <section key={date}>
               <div className="rounded-xl border border-zinc-200 bg-white shadow-sm overflow-clip">
-                {/* Sticky header: date row + cinema column headings */}
                 <div className="sticky top-0 z-10 border-b border-zinc-200">
                   <div className="px-3 py-1 bg-zinc-50">
                     <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
@@ -116,78 +192,7 @@ export default function FilmList({ films }: Props) {
                     ))}
                   </div>
                 </div>
-
-                {/* Time-of-day sections */}
-                {(() => {
-                  const groups = new Map<TimeOfDay, SessionWithFilm[]>()
-                  for (const s of sessions) {
-                    const tod = timeOfDay(s.time)
-                    const g = groups.get(tod) ?? []
-                    g.push(s)
-                    groups.set(tod, g)
-                  }
-                  return TIME_OF_DAY_ORDER.filter((tod) => groups.has(tod)).map((tod, gi) => {
-                    // Build time → cinemaId → sessions map
-                    const byTimeCinema = new Map<string, Map<CinemaId, SessionWithFilm[]>>()
-                    for (const s of groups.get(tod)!) {
-                      if (!byTimeCinema.has(s.time)) byTimeCinema.set(s.time, new Map())
-                      const cinemaMap = byTimeCinema.get(s.time)!
-                      if (!cinemaMap.has(s.cinemaId)) cinemaMap.set(s.cinemaId, [])
-                      cinemaMap.get(s.cinemaId)!.push(s)
-                    }
-                    return (
-                      <div key={tod} className={gi > 0 ? 'border-t-2 border-zinc-200' : ''}>
-                        <div className="px-3 py-px bg-zinc-50 border-b border-zinc-100">
-                          <span className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
-                            {TIME_OF_DAY_LABELS[tod]}
-                          </span>
-                        </div>
-                        <div className="divide-y divide-zinc-100">
-                          {Array.from(byTimeCinema.entries())
-                            .sort(([a], [b]) => a.localeCompare(b))
-                            .map(([time, cinemaMap]) => {
-                              const allSlotSessions = Array.from(cinemaMap.values()).flat()
-                              const started = isAlreadyStarted(date, time)
-                              const startingSoon = allSlotSessions.some((s) =>
-                                isStartingWithinHour(s.date, s.time),
-                              )
-                              const hasPromo = allSlotSessions.some((s) =>
-                                getPromoPrice(s.cinemaId, s.date, s.time),
-                              )
-                              const rowBg = startingSoon
-                                ? 'bg-amber-50 hover:bg-amber-100'
-                                : hasPromo
-                                  ? 'bg-sky-50 hover:bg-sky-100'
-                                  : 'hover:bg-zinc-50'
-                              return (
-                                <div
-                                  key={time}
-                                  className={`grid items-start py-1 px-3 transition-colors ${rowBg}${started ? ' opacity-40' : ''}`}
-                                  style={{
-                                    gridTemplateColumns: `3.5rem repeat(${orderedCinemas.length}, 1fr)`,
-                                  }}
-                                >
-                                  <span className="pt-1 text-sm font-semibold tabular-nums text-zinc-800">
-                                    {formatTime(time)}
-                                  </span>
-                                  {orderedCinemas.map((id) => {
-                                    const cinemaSessions = cinemaMap.get(id) ?? []
-                                    return (
-                                      <div key={id} className="flex flex-col gap-0.5">
-                                        {cinemaSessions.map((s, i) => (
-                                          <SessionCard key={i} session={s} />
-                                        ))}
-                                      </div>
-                                    )
-                                  })}
-                                </div>
-                              )
-                            })}
-                        </div>
-                      </div>
-                    )
-                  })
-                })()}
+                <DaySections sessions={sessions} orderedCinemas={orderedCinemas} date={date} />
               </div>
             </section>
           ))}
