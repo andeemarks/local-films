@@ -82,24 +82,23 @@ function SessionBody({ session, promoPrice, displayPrice }: {
   displayPrice: string | null
 }) {
   const colour = CINEMA_COLOURS[session.cinemaId] ?? 'bg-zinc-100 text-zinc-700'
+  const tooltipParts = [
+    session.filmRating,
+    session.isNearingEndOfRun ? 'Last few days' : null,
+  ].filter(Boolean)
+  const tooltip = tooltipParts.length > 0 ? tooltipParts.join(' · ') : undefined
   return (
     <>
-      <div className="flex items-baseline gap-1.5 min-w-0 flex-wrap">
-        <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${colour}`}>
+      <div className="flex items-baseline min-w-0">
+        <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${colour}`} title={tooltip}>
           {session.filmTitle.toUpperCase()}
         </span>
-        {session.filmRating && <span className="shrink-0 text-xs text-zinc-400">{session.filmRating}</span>}
       </div>
-      <div className="flex items-center gap-2 flex-wrap">
-        {displayPrice && (
+      {displayPrice && (
+        <div className="flex items-center">
           <span className={`text-sm font-medium ${promoPrice ? 'text-sky-600' : 'text-zinc-500'}`}>{displayPrice}</span>
-        )}
-        {session.isNearingEndOfRun && (
-          <span className="rounded-full bg-red-50 px-2.5 py-0.5 text-xs font-semibold text-red-600 ring-1 ring-red-200">
-            Last few days
-          </span>
-        )}
-      </div>
+        </div>
+      )}
     </>
   )
 }
