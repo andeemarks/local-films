@@ -68,6 +68,10 @@ export function isAlreadyStarted(date: string, time: string): boolean {
   return sessionDateTime(date, time).getTime() < Date.now()
 }
 
+export function isExpired(date: string, time: string): boolean {
+  return sessionDateTime(date, time).getTime() < Date.now() - 60 * 60 * 1000
+}
+
 export function getPromoPrice(cinemaId: CinemaId, date: string, time: string): string | null {
   return novaMondayPrice(cinemaId, date, time) ?? kinoDiscountPrice(cinemaId, date)
 }

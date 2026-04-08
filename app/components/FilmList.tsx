@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import type { Film, CinemaId } from '@/lib/types'
-import { SessionCard, formatTime, isStartingWithinHour, isAlreadyStarted, getPromoPrice, type SessionWithFilm, CINEMA_COLOURS, CINEMA_SHORT_NAMES } from './SessionRow'
+import { SessionCard, formatTime, isStartingWithinHour, isAlreadyStarted, isExpired, getPromoPrice, type SessionWithFilm, CINEMA_COLOURS, CINEMA_SHORT_NAMES } from './SessionRow'
 import Filters from './Filters'
 
 interface Props {
@@ -139,6 +139,7 @@ export default function FilmList({ films }: Props) {
   const filtered = allSessions
     .filter((s) => activeCinemas.includes(s.cinemaId))
     .filter((s) => !showNearingEnd || s.isNearingEndOfRun)
+    .filter((s) => !isExpired(s.date, s.time))
 
   const byDate = new Map<string, SessionWithFilm[]>()
   for (const s of filtered) {
