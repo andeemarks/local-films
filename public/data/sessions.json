@@ -7,14 +7,6 @@
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:05",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408958",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
           "date": "2026-06-09",
           "time": "16:05",
           "ticketPrice": null,
@@ -39,22 +31,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "13:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/a-private-life",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "18:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/a-private-life",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-06-09",
           "time": "13:00",
           "ticketPrice": null,
@@ -73,32 +49,64 @@
           "cinemaId": "kino",
           "date": "2026-06-10",
           "time": "18:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/a-private-life",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "13:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/a-private-life",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "13:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/a-private-life",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "10:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/a-private-life",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "12:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/a-private-life",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "13:15",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/a-private-life",
           "flags": []
         }
       ],
-      "isNearingEndOfRun": true
+      "isNearingEndOfRun": false
     },
     {
-      "title": "Akira",
+      "title": "Alphabet Lane",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "20:50",
+          "date": "2026-06-09",
+          "time": "16:20",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408808",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-10",
-          "time": "15:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409087",
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409093",
           "flags": []
         }
       ],
@@ -109,14 +117,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "10:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408953",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -133,14 +133,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "13:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=400051",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -164,6 +156,14 @@
           "ticketPrice": null,
           "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=400054",
           "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "11:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=400055",
+          "flags": []
         }
       ],
       "isNearingEndOfRun": false
@@ -173,38 +173,6 @@
       "runtimeMinutes": null,
       "rating": "M",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "13:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "15:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "18:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "20:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
-          "flags": []
-        },
         {
           "cinemaId": "kino",
           "date": "2026-06-09",
@@ -270,59 +238,131 @@
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "12:30",
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "15:30",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408605",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "14:40",
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "18:10",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408606",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:50",
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "20:45",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408607",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:00",
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "13:20",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408755",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "19:00",
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "15:50",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408608",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "20:10",
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "18:20",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408756",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "21:10",
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "20:45",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408609",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "15:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "18:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "20:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "15:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "18:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "20:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "15:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "18:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "20:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/backrooms",
           "flags": []
         },
         {
@@ -438,85 +478,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "Call Me by Your Name",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408523",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-10",
-          "time": "20:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408522",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
+      "isNearingEndOfRun": false
     },
     {
       "title": "Christophers, The",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "10:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409064",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "12:05",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408563",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "14:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408564",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408565",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408566",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "20:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408567",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -623,46 +591,6 @@
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "11:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408914",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "13:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408915",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408916",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408917",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "20:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408918",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
           "date": "2026-06-09",
           "time": "11:10",
           "ticketPrice": null,
@@ -751,14 +679,6 @@
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "10:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408685",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
           "date": "2026-06-09",
           "time": "10:15",
           "ticketPrice": null,
@@ -781,38 +701,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "11:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408954",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "13:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408955",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408956",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "20:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408957",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -881,42 +769,10 @@
       "isNearingEndOfRun": true
     },
     {
-      "title": "EPiC: Elvis Presley in Concert",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "11:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409099",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
       "title": "Exit 8",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408720",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "21:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408721",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -959,14 +815,6 @@
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "12:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408686",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
           "date": "2026-06-09",
           "time": "12:15",
           "ticketPrice": null,
@@ -989,30 +837,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "11:05",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409025",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "13:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409026",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409027",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -1071,14 +895,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "10:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/ger26-amrum",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-06-09",
           "time": "10:20",
           "ticketPrice": null,
@@ -1101,22 +917,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "10:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408562",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408688",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -1159,14 +959,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "17:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/h-is-for-hawk",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-06-09",
           "time": "17:50",
           "ticketPrice": null,
@@ -1182,27 +974,27 @@
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "10:50",
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "10:15",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408990",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/h-is-for-hawk",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "13:10",
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "10:15",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408991",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/h-is-for-hawk",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:05",
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "13:15",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408992",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/h-is-for-hawk",
           "flags": []
         },
         {
@@ -1254,6 +1046,22 @@
           "flags": []
         }
       ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "Hamnet",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-09",
+          "time": "11:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408647",
+          "flags": []
+        }
+      ],
       "isNearingEndOfRun": true
     },
     {
@@ -1261,30 +1069,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "12:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408792",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408793",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "21:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408794",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -1337,24 +1121,16 @@
       "isNearingEndOfRun": true
     },
     {
-      "title": "I Swear",
+      "title": "How to Talk Australians: The Movie",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "11:00",
+          "date": "2026-06-09",
+          "time": "18:50",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408643",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "15:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409101",
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=407820",
           "flags": []
         }
       ],
@@ -1365,14 +1141,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "11:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408809",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -1393,34 +1161,26 @@
       "isNearingEndOfRun": true
     },
     {
-      "title": "It's Never Over, Jeff Buckley",
+      "title": "It Was Just an Accident",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "10:20",
+          "date": "2026-06-09",
+          "time": "14:15",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408790",
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409092",
           "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "14:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408791",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:55",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408795",
-          "flags": []
-        },
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "It's Never Over, Jeff Buckley",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -1479,39 +1239,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "10:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/masters-of-the-universe",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "15:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/masters-of-the-universe",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "20:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/masters-of-the-universe",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-06-09",
           "time": "10:45",
           "ticketPrice": null,
@@ -1574,36 +1301,46 @@
           "flags": [
             "Audio Description Session",
             "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "10:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/masters-of-the-universe",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "10:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/masters-of-the-universe",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "10:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/masters-of-the-universe",
+          "flags": [
+            "Audio Description Session"
           ]
         }
       ],
-      "isNearingEndOfRun": true
+      "isNearingEndOfRun": false
     },
     {
       "title": "Michael",
       "runtimeMinutes": null,
       "rating": "PG",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "13:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/michael",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "19:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/michael",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
         {
           "cinemaId": "kino",
           "date": "2026-06-09",
@@ -1633,39 +1370,55 @@
           "flags": [
             "Audio Description Session"
           ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "12:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/michael",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "16:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/michael",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "16:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/michael",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "16:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/michael",
+          "flags": [
+            "Audio Description Session"
+          ]
         }
       ],
-      "isNearingEndOfRun": true
+      "isNearingEndOfRun": false
     },
     {
       "title": "Mother Mary",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "12:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409065",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409066",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "21:05",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409067",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -1718,24 +1471,16 @@
       "isNearingEndOfRun": true
     },
     {
-      "title": "Nirvanna the Band the Show the Movie",
+      "title": "Mr. Nobody Against Putin",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "14:25",
+          "date": "2026-06-09",
+          "time": "12:25",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408687",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-10",
-          "time": "14:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408693",
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409091",
           "flags": []
         }
       ],
@@ -1746,22 +1491,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "13:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408754",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408689",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -1794,38 +1523,6 @@
       "runtimeMinutes": null,
       "rating": "MA15+",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "13:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "15:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "18:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "20:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
-          "flags": []
-        },
         {
           "cinemaId": "kino",
           "date": "2026-06-09",
@@ -1891,59 +1588,131 @@
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "12:40",
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "15:45",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408835",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "14:50",
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "18:00",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408836",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "17:00",
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "20:50",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408837",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "15:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
           "time": "18:10",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409102",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "19:10",
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "20:50",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408838",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "20:20",
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "15:45",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409103",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "21:20",
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "18:10",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408839",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "20:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "13:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "15:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "18:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "15:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "18:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "20:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/obsession",
           "flags": []
         },
         {
@@ -2059,6 +1828,22 @@
           "flags": []
         }
       ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "Portrait of a Lady on Fire and Petite Maman",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-09",
+          "time": "19:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=391616",
+          "flags": []
+        }
+      ],
       "isNearingEndOfRun": true
     },
     {
@@ -2066,30 +1851,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "10:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408876",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409028",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "20:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409029",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -2142,34 +1903,26 @@
       "isNearingEndOfRun": true
     },
     {
-      "title": "Private Life, A",
+      "title": "President's Cake, The",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "10:30",
+          "date": "2026-06-09",
+          "time": "15:25",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408834",
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409097",
           "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "14:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409068",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409069",
-          "flags": []
-        },
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Private Life, A",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -2228,16 +1981,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "20:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/project-hail-mary",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-06-09",
           "time": "20:20",
           "ticketPrice": null,
@@ -2255,30 +1998,6 @@
           "flags": [
             "Audio Description Session"
           ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "13:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408644",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408645",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "19:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408646",
-          "flags": []
         },
         {
           "cinemaId": "nova",
@@ -2338,22 +2057,6 @@
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "10:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408752",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "15:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408753",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
           "date": "2026-06-09",
           "time": "10:40",
           "ticketPrice": null,
@@ -2394,39 +2097,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "10:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/scary-movie",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "13:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/scary-movie",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "20:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/scary-movie",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-06-09",
           "time": "10:10",
           "ticketPrice": null,
@@ -2489,64 +2159,96 @@
           "flags": [
             "Audio Description Session",
             "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "20:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/scary-movie",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "13:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/scary-movie",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "19:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/scary-movie",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "13:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/scary-movie",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "13:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/scary-movie",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "19:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/scary-movie",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "13:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/scary-movie",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "19:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/scary-movie",
+          "flags": [
+            "Audio Description Session"
           ]
         }
       ],
-      "isNearingEndOfRun": true
+      "isNearingEndOfRun": false
     },
     {
       "title": "Sheep Detectives, The",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "10:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408604",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "12:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408877",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "14:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408878",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408879",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408880",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "20:55",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408881",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -2647,54 +2349,10 @@
       "isNearingEndOfRun": true
     },
     {
-      "title": "Shortbus",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "16:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=405589",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-10",
-          "time": "18:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=405590",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
       "title": "Sound of Falling",
       "runtimeMinutes": null,
       "rating": "MA15+",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "10:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/sound-of-falling",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "15:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/sound-of-falling",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
         {
           "cinemaId": "kino",
           "date": "2026-06-09",
@@ -2736,27 +2394,43 @@
           ]
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "10:35",
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "10:00",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408717",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/sound-of-falling",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "13:30",
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "10:00",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408718",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/sound-of-falling",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "18:20",
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "10:00",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408719",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/sound-of-falling",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "10:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/sound-of-falling",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "10:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/sound-of-falling",
           "flags": []
         },
         {
@@ -2808,23 +2482,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": true
+      "isNearingEndOfRun": false
     },
     {
       "title": "Star Wars: The Mandalorian and Grogu",
       "runtimeMinutes": null,
       "rating": "M",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "16:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/star-wars-the-mandalorian-and-grogu",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
         {
           "cinemaId": "kino",
           "date": "2026-06-09",
@@ -2853,22 +2517,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "15:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408993",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "20:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408994",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -2911,50 +2559,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "10:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "13:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "16:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "18:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-06-09",
           "time": "10:40",
           "ticketPrice": null,
@@ -3039,10 +2643,160 @@
           "flags": [
             "Audio Description Session",
             "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "16:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "18:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "15:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "18:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "10:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "13:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "18:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "15:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "20:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "16:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "18:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-christophers",
+          "flags": [
+            "Audio Description Session"
           ]
         }
       ],
-      "isNearingEndOfRun": true
+      "isNearingEndOfRun": false
     },
     {
       "title": "The Devil Wears Prada 2",
@@ -3051,36 +2805,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "10:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "15:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "18:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-06-09",
           "time": "10:15",
           "ticketPrice": null,
@@ -3133,6 +2857,106 @@
           "cinemaId": "kino",
           "date": "2026-06-10",
           "time": "18:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "13:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "18:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "13:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "18:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "13:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "18:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "13:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "18:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "13:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
+          "flags": [
+            "Audio Description Session"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "18:15",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/the-devil-wears-prada-2",
           "flags": [
@@ -3140,33 +2964,13 @@
           ]
         }
       ],
-      "isNearingEndOfRun": true
+      "isNearingEndOfRun": false
     },
     {
       "title": "The North",
       "runtimeMinutes": null,
       "rating": "M",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "12:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-north",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "20:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-north",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
         {
           "cinemaId": "kino",
           "date": "2026-06-09",
@@ -3217,22 +3021,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "12:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-richest-woman-in-the-world",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "20:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-richest-woman-in-the-world",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-06-09",
           "time": "12:30",
           "ticketPrice": null,
@@ -3254,39 +3042,47 @@
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/the-richest-woman-in-the-world",
           "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "13:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-richest-woman-in-the-world",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "10:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-richest-woman-in-the-world",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "10:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-richest-woman-in-the-world",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "13:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-richest-woman-in-the-world",
+          "flags": []
         }
       ],
-      "isNearingEndOfRun": true
+      "isNearingEndOfRun": false
     },
     {
       "title": "The Sheep Detectives",
       "runtimeMinutes": null,
       "rating": "PG",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "10:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "15:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-06-08",
-          "time": "18:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
-          "flags": []
-        },
         {
           "cinemaId": "kino",
           "date": "2026-06-09",
@@ -3334,47 +3130,103 @@
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
           "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "Wolfram",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
+        },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "13:45",
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "10:20",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409100",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
           "flags": []
         },
         {
-          "cinemaId": "nova",
-          "date": "2026-06-10",
-          "time": "13:45",
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "13:10",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409086",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "15:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "10:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "13:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "17:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "12:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "11:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "13:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "10:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
+          "flags": []
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "15:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-sheep-detectives",
           "flags": []
         }
       ],
-      "isNearingEndOfRun": true
+      "isNearingEndOfRun": false
     },
     {
       "title": "www.RachelOrmont.com",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-08",
-          "time": "20:55",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408690",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-06-09",
@@ -3395,112 +3247,16 @@
       "isNearingEndOfRun": true
     },
     {
-      "title": "Alphabet Lane",
+      "title": "Akira",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-06-09",
-          "time": "16:20",
+          "date": "2026-06-10",
+          "time": "15:45",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409093",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "Hamnet",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-09",
-          "time": "11:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408647",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "How to Talk Australians: The Movie",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-09",
-          "time": "18:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=407820",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "It Was Just an Accident",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-09",
-          "time": "14:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409092",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "Mr. Nobody Against Putin",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-09",
-          "time": "12:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409091",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "Portrait of a Lady on Fire and Petite Maman",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-09",
-          "time": "19:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=391616",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "President's Cake, The",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-06-09",
-          "time": "15:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409097",
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409087",
           "flags": []
         }
       ],
@@ -3517,6 +3273,22 @@
           "time": "14:15",
           "ticketPrice": null,
           "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409083",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Call Me by Your Name",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-10",
+          "time": "20:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408522",
           "flags": []
         }
       ],
@@ -3601,6 +3373,16 @@
         },
         {
           "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "20:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/disclosure-day",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
           "date": "2026-06-12",
           "time": "13:00",
           "ticketPrice": null,
@@ -3623,6 +3405,16 @@
           "cinemaId": "kino",
           "date": "2026-06-12",
           "time": "19:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/disclosure-day",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "20:30",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/disclosure-day",
           "flags": [
@@ -3661,6 +3453,16 @@
         },
         {
           "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "20:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/disclosure-day",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
           "date": "2026-06-14",
           "time": "13:00",
           "ticketPrice": null,
@@ -3683,6 +3485,56 @@
           "cinemaId": "kino",
           "date": "2026-06-14",
           "time": "19:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/disclosure-day",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "20:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/disclosure-day",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "13:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/disclosure-day",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "16:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/disclosure-day",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "19:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/disclosure-day",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "20:30",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/disclosure-day",
           "flags": [
@@ -4010,6 +3862,70 @@
           "flags": []
         },
         {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "11:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409279",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "12:55",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409283",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "14:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409280",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "15:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409284",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "17:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409281",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "18:25",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409285",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "19:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409282",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "21:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409286",
+          "flags": []
+        },
+        {
           "cinemaId": "astor",
           "date": "2026-06-10",
           "time": "19:00",
@@ -4072,6 +3988,14 @@
           "ticketPrice": null,
           "bookingUrl": "https://www.astortheatre.net.au/sessions/2026-06-15-1900",
           "flags": []
+        },
+        {
+          "cinemaId": "astor",
+          "date": "2026-06-16",
+          "time": "19:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.astortheatre.net.au/sessions/2026-06-16-000",
+          "flags": []
         }
       ],
       "isNearingEndOfRun": false
@@ -4109,6 +4033,38 @@
       "isNearingEndOfRun": true
     },
     {
+      "title": "Nirvanna the Band the Show the Movie",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-10",
+          "time": "14:25",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408693",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Shortbus",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-10",
+          "time": "18:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=405590",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
       "title": "Voice of Hind Rajab, The",
       "runtimeMinutes": null,
       "rating": null,
@@ -4123,6 +4079,130 @@
         }
       ],
       "isNearingEndOfRun": true
+    },
+    {
+      "title": "Wolfram",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-10",
+          "time": "13:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=409086",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Colony",
+      "runtimeMinutes": null,
+      "rating": "MA15+",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "15:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/colony",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "20:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/colony",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "15:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/colony",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "20:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/colony",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "13:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/colony",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "20:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/colony",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "13:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/colony",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "20:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/colony",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "13:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/colony",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "20:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/colony",
+          "flags": [
+            "No Free Tickets"
+          ]
+        }
+      ],
+      "isNearingEndOfRun": false
     },
     {
       "title": "Mommie Dearest",
@@ -4152,6 +4232,280 @@
           "ticketPrice": null,
           "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=405573",
           "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "14:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=405574",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "Trifole",
+      "runtimeMinutes": null,
+      "rating": "M",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "13:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/trifole",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "18:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/trifole",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "13:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/trifole",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "18:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/trifole",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/trifole",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "18:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/trifole",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "10:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/trifole",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "18:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/trifole",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/trifole",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "18:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/trifole",
+          "flags": [
+            "No Free Tickets"
+          ]
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "Tuner",
+      "runtimeMinutes": null,
+      "rating": "MA15+",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "13:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-11",
+          "time": "20:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "10:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "15:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-12",
+          "time": "20:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "10:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "15:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-13",
+          "time": "20:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "10:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "15:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-14",
+          "time": "20:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "10:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "15:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "20:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/tuner",
+          "flags": [
+            "No Free Tickets"
+          ]
         }
       ],
       "isNearingEndOfRun": false
@@ -4416,7 +4770,129 @@
         }
       ],
       "isNearingEndOfRun": false
+    },
+    {
+      "title": "SPA26 Always Winter",
+      "runtimeMinutes": null,
+      "rating": "CTC",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "13:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/spa26-always-winter",
+          "flags": [
+            "No Free Tickets"
+          ]
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "SPA26 Isabel",
+      "runtimeMinutes": null,
+      "rating": "CTC",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "16:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/spa26-isabel",
+          "flags": [
+            "No Free Tickets"
+          ]
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "SPA26 La Salsa Vive",
+      "runtimeMinutes": null,
+      "rating": "CTC",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "11:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/spa26-la-salsa-vive",
+          "flags": [
+            "No Free Tickets"
+          ]
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "SPA26 Sofia's Suspicion",
+      "runtimeMinutes": null,
+      "rating": "CTC",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "20:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/spa26-sofias-suspicion",
+          "flags": [
+            "No Free Tickets"
+          ]
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "SPA26 The Tigers",
+      "runtimeMinutes": null,
+      "rating": "CTC",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-06-15",
+          "time": "18:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/spa26-the-tigers",
+          "flags": [
+            "No Free Tickets"
+          ]
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "Death of Robin Hood, The",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "19:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=408517",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "Lost Boys, The and The Hunger",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-06-16",
+          "time": "19:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=391617",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": false
     }
   ],
-  "scrapedAt": "2026-06-07T20:24:27.633Z"
+  "scrapedAt": "2026-06-08T20:42:43.320Z"
 }
