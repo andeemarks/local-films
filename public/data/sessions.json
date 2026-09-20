@@ -7,14 +7,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "17:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/and-sons",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-09-21",
           "time": "13:10",
           "ticketPrice": null,
@@ -51,30 +43,6 @@
           "time": "13:10",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/and-sons",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "11:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419614",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "16:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419821",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "20:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419822",
           "flags": []
         },
         {
@@ -150,21 +118,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "AKIRA",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "20:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419947",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -182,21 +142,77 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Altered States",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-21",
+          "time": "20:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419693",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-23",
+          "time": "21:25",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419730",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Big Night",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-21",
+          "time": "16:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419691",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Blue Trail, The",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-21",
+          "time": "14:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419690",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-23",
+          "time": "13:25",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419981",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
     },
     {
       "title": "Blue Velvet",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:05",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419617",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -214,61 +230,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Broken English",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419785",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "12:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419786",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "14:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419787",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "16:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419788",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419789",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "20:35",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419790",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -414,21 +382,61 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "CARS",
+      "runtimeMinutes": null,
+      "rating": "G",
+      "sessions": [
+        {
+          "cinemaId": "sun",
+          "date": "2026-09-21",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26CARS/2026-09-21/10:30am/Trocadero",
+          "flags": []
+        },
+        {
+          "cinemaId": "sun",
+          "date": "2026-09-22",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26CARS/2026-09-22/10:30am/Trocadero",
+          "flags": []
+        },
+        {
+          "cinemaId": "sun",
+          "date": "2026-09-23",
+          "time": "10:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26CARS/2026-09-23/10:20am/Trocadero",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Case 137",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-21",
+          "time": "13:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419963",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
     },
     {
       "title": "Chronology of Water, The",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=420084",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -454,29 +462,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Colours Of Time (La Venue De L’Avenir)",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "11:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419848",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419849",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -526,29 +518,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Coraline",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419964",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "20:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419950",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -582,7 +558,7 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Coyote vs. Acme",
@@ -591,36 +567,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "11:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/coyote-vs-acme",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "15:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/coyote-vs-acme",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "18:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/coyote-vs-acme",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-09-21",
           "time": "11:00",
           "ticketPrice": null,
@@ -708,38 +654,6 @@
           "flags": [
             "No Free Tickets"
           ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419374",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "12:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419375",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "14:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419376",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419823",
-          "flags": []
         },
         {
           "cinemaId": "nova",
@@ -835,54 +749,6 @@
           "time": "18:45",
           "ticketPrice": null,
           "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419832",
-          "flags": []
-        },
-        {
-          "cinemaId": "astor",
-          "date": "2026-09-20",
-          "time": "12:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.astortheatre.net.au/sessions/2026-09-20-1200",
-          "flags": []
-        },
-        {
-          "cinemaId": "astor",
-          "date": "2026-09-20",
-          "time": "14:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.astortheatre.net.au/sessions/2026-09-20-000",
-          "flags": []
-        },
-        {
-          "cinemaId": "astor",
-          "date": "2026-09-20",
-          "time": "21:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.astortheatre.net.au/sessions/2026-09-20-2100",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "10:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26COYOTEVACME/2026-09-20/10:00am/Davis",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "13:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26COYOTEVACME/2026-09-20/1:50pm/La-Scala",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "18:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26COYOTEVACME/2026-09-20/6:00pm/Trocadero",
           "flags": []
         },
         {
@@ -982,29 +848,37 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Cure",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-21",
+          "time": "16:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419952",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-22",
+          "time": "18:25",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419972",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
     },
     {
       "title": "De Gaulle: Resistance",
       "runtimeMinutes": null,
       "rating": "MA15+",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "12:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/de-gaulle-resistance",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "20:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/de-gaulle-resistance",
-          "flags": []
-        },
         {
           "cinemaId": "kino",
           "date": "2026-09-21",
@@ -1043,30 +917,6 @@
           "time": "12:45",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/de-gaulle-resistance",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419709",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "15:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419710",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "19:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419713",
           "flags": []
         },
         {
@@ -1142,22 +992,6 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "DON'T LOOK BACK IN ANGER",
-      "runtimeMinutes": null,
-      "rating": "MA15+NFT",
-      "sessions": [
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "16:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26DONTLOOKBACKI/2026-09-20/4:20pm/St-George",
-          "flags": []
-        }
-      ],
       "isNearingEndOfRun": true
     },
     {
@@ -1165,14 +999,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "14:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=414923",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -1221,46 +1047,6 @@
       "runtimeMinutes": null,
       "rating": "PGNFT",
       "sessions": [
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "10:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26FORGOTTENISLA/2026-09-20/10:10am/Barkly",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "12:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26FORGOTTENISLA/2026-09-20/12:00pm/Davis",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "14:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26FORGOTTENISLA/2026-09-20/2:20pm/Grand",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "18:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26FORGOTTENISLA/2026-09-20/6:00pm/La-Scala",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "21:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26FORGOTTENISLA/2026-09-20/9:00pm/Grand",
-          "flags": []
-        },
         {
           "cinemaId": "sun",
           "date": "2026-09-21",
@@ -1382,53 +1168,7 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "Heart of the Beast",
-      "runtimeMinutes": null,
-      "rating": "M",
-      "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "14:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/heart-of-the-beast",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "20:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/heart-of-the-beast",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-23",
-          "time": "18:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/heart-of-the-beast",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "16:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=418690",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Hope",
@@ -1437,30 +1177,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "10:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/hope",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "15:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/hope",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "18:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/hope",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-09-21",
           "time": "10:00",
           "ticketPrice": null,
@@ -1529,38 +1245,6 @@
           "time": "18:30",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/hope",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419573",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "13:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419574",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "16:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419575",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "19:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419576",
           "flags": []
         },
         {
@@ -1660,21 +1344,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "I Want Your Sex",
       "runtimeMinutes": null,
       "rating": "MA15+",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "10:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/i-want-your-sex",
-          "flags": []
-        },
         {
           "cinemaId": "kino",
           "date": "2026-09-21",
@@ -1697,30 +1373,6 @@
           "time": "10:30",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/i-want-your-sex",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "12:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419540",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "17:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419541",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "21:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419542",
           "flags": []
         },
         {
@@ -1788,47 +1440,115 @@
           "flags": []
         }
       ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "IFF26 A Beautiful Day",
+      "runtimeMinutes": null,
+      "rating": "M",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-21",
+          "time": "15:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-a-beautiful-day",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-23",
+          "time": "15:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416369",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-26",
+          "time": "11:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416382",
+          "flags": []
+        }
+      ],
       "isNearingEndOfRun": false
     },
     {
-      "title": "IFF26 Almost Grazia",
+      "title": "IFF26 Beloved",
       "runtimeMinutes": null,
       "rating": "CTC",
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-09-23",
-          "time": "11:15",
+          "date": "2026-09-21",
+          "time": "11:00",
           "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-almost-grazia",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-beloved",
           "flags": [
             "No Free Tickets"
           ]
         },
         {
           "cinemaId": "kino",
-          "date": "2026-09-26",
-          "time": "11:00",
+          "date": "2026-09-25",
+          "time": "15:45",
           "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-almost-grazia",
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-beloved",
           "flags": [
             "No Free Tickets"
           ]
         },
         {
           "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "20:30",
+          "date": "2026-09-22",
+          "time": "11:15",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416361",
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416362",
           "flags": []
         },
         {
           "cinemaId": "nova",
-          "date": "2026-09-25",
-          "time": "13:30",
+          "date": "2026-09-26",
+          "time": "15:30",
           "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416378",
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416384",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "IFF26 Classmates",
+      "runtimeMinutes": null,
+      "rating": "M",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-21",
+          "time": "13:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-classmates",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-23",
+          "time": "11:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416367",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-27",
+          "time": "20:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416391",
           "flags": []
         }
       ],
@@ -1839,16 +1559,6 @@
       "runtimeMinutes": null,
       "rating": "M",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "12:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-holy-cannoli",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
         {
           "cinemaId": "kino",
           "date": "2026-09-21",
@@ -1881,14 +1591,6 @@
         },
         {
           "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416360",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
           "date": "2026-09-22",
           "time": "20:20",
           "ticketPrice": null,
@@ -1909,192 +1611,6 @@
           "time": "13:15",
           "ticketPrice": null,
           "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416388",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "IFF26 La Scala: The Force of Destiny",
-      "runtimeMinutes": null,
-      "rating": "PG",
-      "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "10:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-la-scala-the-force-of-destiny",
-          "flags": [
-            "No Free Tickets"
-          ]
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "IFF26 Life is Life",
-      "runtimeMinutes": null,
-      "rating": "CTC",
-      "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-24",
-          "time": "15:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-life-is-life",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-26",
-          "time": "13:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-life-is-life",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "15:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416359",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-24",
-          "time": "20:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416376",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "IFF26 Separate Beds",
-      "runtimeMinutes": null,
-      "rating": "CTC",
-      "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-22",
-          "time": "15:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-separate-beds",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "13:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416358",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-24",
-          "time": "18:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416375",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "IFF26 Sweetheart",
-      "runtimeMinutes": null,
-      "rating": "PG",
-      "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "18:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-sweetheart",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-23",
-          "time": "18:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-sweetheart",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-25",
-          "time": "11:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-sweetheart",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-24",
-          "time": "11:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416372",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-27",
-          "time": "18:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416390",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "IFF26 Three Goodbyes",
-      "runtimeMinutes": null,
-      "rating": "CTC",
-      "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "15:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-three-goodbyes",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-23",
-          "time": "20:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-three-goodbyes",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-26",
-          "time": "17:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416385",
           "flags": []
         }
       ],
@@ -2127,14 +1643,6 @@
         },
         {
           "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416357",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
           "date": "2026-09-22",
           "time": "15:50",
           "ticketPrice": null,
@@ -2153,104 +1661,10 @@
       "isNearingEndOfRun": false
     },
     {
-      "title": "IFF26 Words Left Unspoken",
-      "runtimeMinutes": null,
-      "rating": "CTC",
-      "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "20:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-words-left-unspoken",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-23",
-          "time": "13:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-words-left-unspoken",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-25",
-          "time": "20:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-words-left-unspoken",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-25",
-          "time": "15:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416379",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-26",
-          "time": "20:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416386",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
       "title": "Invite, The",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "12:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419671",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "14:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419672",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "16:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419673",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:55",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419674",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "21:05",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419675",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -2372,29 +1786,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "It Ends",
       "runtimeMinutes": null,
       "rating": "MA15+",
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "13:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419907",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "21:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419909",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -2445,14 +1843,6 @@
         },
         {
           "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "16:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26ITENDS/2026-09-20/4:30pm/Roxy",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
           "date": "2026-09-21",
           "time": "16:30",
           "ticketPrice": null,
@@ -2476,46 +1866,6 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "James McNeill Whistler: Exhibition on Screen",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "13:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416538",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-22",
-          "time": "13:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416539",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "Leviticus",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "14:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419949",
-          "flags": []
-        }
-      ],
       "isNearingEndOfRun": true
     },
     {
@@ -2525,30 +1875,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "10:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/maigret-and-the-dead-lover",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "16:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/maigret-and-the-dead-lover",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "18:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/maigret-and-the-dead-lover",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-09-21",
           "time": "10:10",
           "ticketPrice": null,
@@ -2617,30 +1943,6 @@
           "time": "18:00",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/maigret-and-the-dead-lover",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419670",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "13:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419711",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419712",
           "flags": []
         },
         {
@@ -2716,23 +2018,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Oasis: Don't Look Back In Anger",
       "runtimeMinutes": null,
       "rating": "MA15+",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "12:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/oasis-dont-look-back-in-anger",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
         {
           "cinemaId": "kino",
           "date": "2026-09-21",
@@ -2762,22 +2054,6 @@
           "flags": [
             "Audio Description Session"
           ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "15:55",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419942",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "20:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419944",
-          "flags": []
         },
         {
           "cinemaId": "nova",
@@ -2828,21 +2104,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Obsession",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "20:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419851",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -2868,45 +2136,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Odyssey, The",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419744",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "12:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419637",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "16:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419638",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "19:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419639",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -3004,29 +2240,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "On the Road",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "17:05",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419908",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "20:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419618",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -3076,29 +2296,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Palestine 36",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419537",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "14:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419538",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -3164,29 +2368,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "ParaNorman",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "11:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416487",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416488",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -3227,22 +2415,6 @@
       "runtimeMinutes": null,
       "rating": "GNFT",
       "sessions": [
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "10:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26PAWPATROLDINO/2026-09-20/10:10am/La-Scala",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "12:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26PAWPATROLDINO/2026-09-20/12:00pm/La-Scala",
-          "flags": []
-        },
         {
           "cinemaId": "sun",
           "date": "2026-09-21",
@@ -3292,21 +2464,29 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Perfect Days",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-21",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419951",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
     },
     {
       "title": "Persona",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "13:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419852",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -3332,7 +2512,7 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Practical Magic 2",
@@ -3341,46 +2521,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "12:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/practical-magic-2",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "15:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/practical-magic-2",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "18:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/practical-magic-2",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "20:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/practical-magic-2",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-09-21",
           "time": "12:30",
           "ticketPrice": null,
@@ -3498,38 +2638,6 @@
           "flags": [
             "Audio Description Session"
           ]
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "12:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26PRACTICALMAGI/2026-09-20/12:50pm/Trocadero",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "16:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26PRACTICALMAGI/2026-09-20/4:20pm/Lyric",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "18:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26PRACTICALMAGI/2026-09-20/6:50pm/Davis",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "20:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26PRACTICALMAGI/2026-09-20/8:50pm/St-George",
-          "flags": []
         },
         {
           "cinemaId": "sun",
@@ -3652,7 +2760,7 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Resident Evil",
@@ -3661,60 +2769,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "12:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/resident-evil",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "13:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/resident-evil",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "16:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/resident-evil",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "18:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/resident-evil",
-          "flags": [
-            "Audio Description Session",
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "20:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/resident-evil",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-09-21",
           "time": "12:00",
           "ticketPrice": null,
@@ -3874,38 +2928,6 @@
           "flags": [
             "No Free Tickets"
           ]
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "14:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26RESIDENTEVIL/2026-09-20/2:10pm/St-George",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "16:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26RESIDENTEVIL/2026-09-20/4:50pm/Davis",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "19:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26RESIDENTEVIL/2026-09-20/7:00pm/Grand",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "21:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26RESIDENTEVIL/2026-09-20/9:15pm/Davis",
-          "flags": []
         },
         {
           "cinemaId": "sun",
@@ -4004,29 +3026,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Rivals of Amziah King, The",
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "13:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419615",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419943",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -4076,21 +3082,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "RUNNER",
       "runtimeMinutes": null,
       "rating": "MNFT",
       "sessions": [
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "12:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26RUNNER/2026-09-20/12:10pm/Roxy",
-          "flags": []
-        },
         {
           "cinemaId": "sun",
           "date": "2026-09-21",
@@ -4116,37 +3114,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Shaun the Sheep: The Beast of Mossy Bottom",
       "runtimeMinutes": null,
       "rating": "GNFT",
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419371",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "12:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419372",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "13:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419373",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -4217,30 +3191,6 @@
           "time": "13:40",
           "ticketPrice": null,
           "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419394",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "11:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26SHAUNTHESHEEP/2026-09-20/11:00am/Trocadero",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "12:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26SHAUNTHESHEEP/2026-09-20/12:40pm/Grand",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "18:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26SHAUNTHESHEEP/2026-09-20/6:50pm/Lyric",
           "flags": []
         },
         {
@@ -4340,21 +3290,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Silenced",
       "runtimeMinutes": null,
       "rating": "M",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "10:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/silenced",
-          "flags": []
-        },
         {
           "cinemaId": "kino",
           "date": "2026-09-21",
@@ -4377,30 +3319,6 @@
           "time": "10:00",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/silenced",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "11:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419904",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "15:05",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419905",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "19:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419906",
           "flags": []
         },
         {
@@ -4476,21 +3394,37 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Silent Friend",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-21",
+          "time": "10:50",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419962",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-23",
+          "time": "15:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419982",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
     },
     {
       "title": "SPA WEEKEND",
       "runtimeMinutes": null,
       "rating": "M",
       "sessions": [
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "20:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26SPAWEEKEND/2026-09-20/8:30pm/Lyric",
-          "flags": []
-        },
         {
           "cinemaId": "sun",
           "date": "2026-09-21",
@@ -4516,23 +3450,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Spider-Man: Brand New Day",
       "runtimeMinutes": null,
       "rating": "M",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "15:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/spider-man-brand-new-day",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
         {
           "cinemaId": "kino",
           "date": "2026-09-21",
@@ -4562,30 +3486,6 @@
           "flags": [
             "Audio Description Session"
           ]
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "11:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26SPIDERMANBRAN/2026-09-20/11:00am/Lyric",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "15:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26SPIDERMANBRAN/2026-09-20/3:20pm/Trocadero",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "20:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26SPIDERMANBRAN/2026-09-20/8:00pm/Trocadero",
-          "flags": []
         },
         {
           "cinemaId": "sun",
@@ -4660,19 +3560,19 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
-      "title": "SUKUNDIMI WALKS BEFORE ME",
+      "title": "Stop! That! Train!",
       "runtimeMinutes": null,
-      "rating": "CTCNFT",
+      "rating": null,
       "sessions": [
         {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "14:30",
+          "cinemaId": "nova",
+          "date": "2026-09-21",
+          "time": "21:00",
           "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26SUKUNDIMI/2026-09-20/2:30pm/Davis",
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419956",
           "flags": []
         }
       ],
@@ -4683,14 +3583,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "12:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=418666",
-          "flags": []
-        },
         {
           "cinemaId": "nova",
           "date": "2026-09-21",
@@ -4717,14 +3609,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "12:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/teenage-sex-and-death-at-camp-miasma",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-09-21",
           "time": "20:40",
           "ticketPrice": null,
@@ -4745,46 +3629,6 @@
           "time": "21:00",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/teenage-sex-and-death-at-camp-miasma",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419636",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "14:05",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419745",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "16:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419746",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419747",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "20:55",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419748",
           "flags": []
         },
         {
@@ -4908,21 +3752,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "THE DOG STARS",
       "runtimeMinutes": null,
       "rating": "MA15+",
       "sessions": [
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "20:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26DOGSTARS/2026-09-20/8:40pm/Roxy",
-          "flags": []
-        },
         {
           "cinemaId": "sun",
           "date": "2026-09-21",
@@ -4972,21 +3808,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "THE END OF OAK STREET",
       "runtimeMinutes": null,
       "rating": "M",
       "sessions": [
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "12:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26ENDOFOAKSTREE/2026-09-20/12:10pm/St-George",
-          "flags": []
-        },
         {
           "cinemaId": "sun",
           "date": "2026-09-21",
@@ -5036,29 +3864,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "The Invite",
       "runtimeMinutes": null,
       "rating": "MA15+",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "13:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-invite",
-          "flags": []
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "18:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-invite",
-          "flags": []
-        },
         {
           "cinemaId": "kino",
           "date": "2026-09-21",
@@ -5109,14 +3921,6 @@
         },
         {
           "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "20:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26INVITE/2026-09-20/8:15pm/La-Scala",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
           "date": "2026-09-21",
           "time": "15:50",
           "ticketPrice": null,
@@ -5156,23 +3960,13 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "The Odyssey",
       "runtimeMinutes": null,
       "rating": "M",
       "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "19:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-odyssey",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
         {
           "cinemaId": "kino",
           "date": "2026-09-21",
@@ -5204,37 +3998,13 @@
           ]
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "THE ODYSSEY IN 70MM",
       "runtimeMinutes": null,
       "rating": "M",
       "sessions": [
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "12:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S2670MMODYSSEY/2026-09-20/12:30pm/Barkly",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "16:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S2670MMODYSSEY/2026-09-20/4:00pm/Barkly",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "19:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S2670MMODYSSEY/2026-09-20/7:30pm/Barkly",
-          "flags": []
-        },
         {
           "cinemaId": "sun",
           "date": "2026-09-21",
@@ -5282,6 +4052,14 @@
           "ticketPrice": null,
           "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S2670MMODYSSEY/2026-09-27/6:00pm/Barkly",
           "flags": []
+        },
+        {
+          "cinemaId": "sun",
+          "date": "2026-09-28",
+          "time": "19:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S2670MMODYSSEY/2026-09-28/7:30pm/Barkly",
+          "flags": []
         }
       ],
       "isNearingEndOfRun": false
@@ -5291,22 +4069,6 @@
       "runtimeMinutes": null,
       "rating": null,
       "sessions": [
-        {
-          "cinemaId": "astor",
-          "date": "2026-09-20",
-          "time": "16:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.astortheatre.net.au/sessions/2026-09-20-1620",
-          "flags": []
-        },
-        {
-          "cinemaId": "astor",
-          "date": "2026-09-20",
-          "time": "19:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.astortheatre.net.au/sessions/2026-09-20-1900",
-          "flags": []
-        },
         {
           "cinemaId": "astor",
           "date": "2026-09-21",
@@ -5331,30 +4093,6 @@
       "runtimeMinutes": null,
       "rating": "MA15+NFT",
       "sessions": [
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "10:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26THEWEIGHT/2026-09-20/10:00am/St-George",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "14:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26THEWEIGHT/2026-09-20/2:20pm/Roxy",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "18:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26THEWEIGHT/2026-09-20/6:30pm/Roxy",
-          "flags": []
-        },
         {
           "cinemaId": "sun",
           "date": "2026-09-21",
@@ -5428,7 +4166,7 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Tony",
@@ -5437,36 +4175,6 @@
       "sessions": [
         {
           "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "10:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/tony",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "15:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/tony",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-20",
-          "time": "20:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/tony",
-          "flags": [
-            "Audio Description Session"
-          ]
-        },
-        {
-          "cinemaId": "kino",
           "date": "2026-09-21",
           "time": "10:00",
           "ticketPrice": null,
@@ -5554,54 +4262,6 @@
           "flags": [
             "Audio Description Session"
           ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419495",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "12:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419496",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "14:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419497",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "16:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419498",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419499",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "20:55",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419500",
-          "flags": []
         },
         {
           "cinemaId": "nova",
@@ -5749,54 +4409,6 @@
         },
         {
           "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "10:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419495",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "12:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419496",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "14:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419497",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "16:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419498",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "18:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419499",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "20:55",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419500",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
           "date": "2026-09-21",
           "time": "10:25",
           "ticketPrice": null,
@@ -5937,30 +4549,6 @@
           "time": "20:55",
           "ticketPrice": null,
           "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419518",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "10:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26TONY/2026-09-20/10:00am/Roxy",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "15:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26TONY/2026-09-20/3:50pm/La-Scala",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-20",
-          "time": "18:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26TONY/2026-09-20/6:40pm/St-George",
           "flags": []
         },
         {
@@ -6060,7 +4648,7 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Tuner",
@@ -6069,322 +4657,10 @@
       "sessions": [
         {
           "cinemaId": "nova",
-          "date": "2026-09-20",
-          "time": "15:55",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419616",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
           "date": "2026-09-21",
           "time": "15:55",
           "ticketPrice": null,
           "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419881",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "Altered States",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-21",
-          "time": "20:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419693",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-23",
-          "time": "21:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419730",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "Big Night",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-21",
-          "time": "16:10",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419691",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "Blue Trail, The",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-21",
-          "time": "14:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419690",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-23",
-          "time": "13:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419981",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "CARS",
-      "runtimeMinutes": null,
-      "rating": "G",
-      "sessions": [
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-21",
-          "time": "10:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26CARS/2026-09-21/10:30am/Trocadero",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-22",
-          "time": "10:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26CARS/2026-09-22/10:30am/Trocadero",
-          "flags": []
-        },
-        {
-          "cinemaId": "sun",
-          "date": "2026-09-23",
-          "time": "10:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.movietkts.com.au/Sun-Theatre-Yarraville/S26CARS/2026-09-23/10:20am/Trocadero",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "Case 137",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-21",
-          "time": "13:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419963",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "Cure",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-21",
-          "time": "16:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419952",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-22",
-          "time": "18:25",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419972",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "IFF26 A Beautiful Day",
-      "runtimeMinutes": null,
-      "rating": "M",
-      "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-21",
-          "time": "15:40",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-a-beautiful-day",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-23",
-          "time": "15:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416369",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-26",
-          "time": "11:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416382",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "IFF26 Beloved",
-      "runtimeMinutes": null,
-      "rating": "CTC",
-      "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-21",
-          "time": "11:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-beloved",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-25",
-          "time": "15:45",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-beloved",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-22",
-          "time": "11:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416362",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-26",
-          "time": "15:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416384",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "IFF26 Classmates",
-      "runtimeMinutes": null,
-      "rating": "M",
-      "sessions": [
-        {
-          "cinemaId": "kino",
-          "date": "2026-09-21",
-          "time": "13:20",
-          "ticketPrice": null,
-          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-classmates",
-          "flags": [
-            "No Free Tickets"
-          ]
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-23",
-          "time": "11:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416367",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-27",
-          "time": "20:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416391",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "Perfect Days",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-21",
-          "time": "10:30",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419951",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": true
-    },
-    {
-      "title": "Silent Friend",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-21",
-          "time": "10:50",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419962",
-          "flags": []
-        },
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-23",
-          "time": "15:15",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419982",
-          "flags": []
-        }
-      ],
-      "isNearingEndOfRun": false
-    },
-    {
-      "title": "Stop! That! Train!",
-      "runtimeMinutes": null,
-      "rating": null,
-      "sessions": [
-        {
-          "cinemaId": "nova",
-          "date": "2026-09-21",
-          "time": "21:00",
-          "ticketPrice": null,
-          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419956",
           "flags": []
         }
       ],
@@ -6446,6 +4722,16 @@
           ]
         },
         {
+          "cinemaId": "kino",
+          "date": "2026-09-27",
+          "time": "15:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-a-brief-affair",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
           "cinemaId": "nova",
           "date": "2026-09-23",
           "time": "18:00",
@@ -6480,6 +4766,16 @@
           ]
         },
         {
+          "cinemaId": "kino",
+          "date": "2026-09-27",
+          "time": "20:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-a-year-of-school",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
           "cinemaId": "nova",
           "date": "2026-09-23",
           "time": "20:15",
@@ -6499,6 +4795,16 @@
           "cinemaId": "kino",
           "date": "2026-09-24",
           "time": "18:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-armani-and-the-birth-of-italian-fashion",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-27",
+          "time": "13:00",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-armani-and-the-birth-of-italian-fashion",
           "flags": [
@@ -6566,6 +4872,42 @@
           "flags": []
         }
       ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "IFF26 Separate Beds",
+      "runtimeMinutes": null,
+      "rating": "CTC",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-22",
+          "time": "15:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-separate-beds",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-27",
+          "time": "10:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-separate-beds",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-24",
+          "time": "18:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416375",
+          "flags": []
+        }
+      ],
       "isNearingEndOfRun": false
     },
     {
@@ -6619,6 +4961,22 @@
       "isNearingEndOfRun": true
     },
     {
+      "title": "James McNeill Whistler: Exhibition on Screen",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-22",
+          "time": "13:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416539",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
       "title": "Project Hail Mary",
       "runtimeMinutes": null,
       "rating": null,
@@ -6664,7 +5022,7 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Christophers, The",
@@ -6677,6 +5035,104 @@
           "time": "14:45",
           "ticketPrice": null,
           "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=419976",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "Heart of the Beast",
+      "runtimeMinutes": null,
+      "rating": "M",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-23",
+          "time": "18:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/heart-of-the-beast",
+          "flags": [
+            "No Free Tickets"
+          ]
+        }
+      ],
+      "isNearingEndOfRun": true
+    },
+    {
+      "title": "IFF26 Almost Grazia",
+      "runtimeMinutes": null,
+      "rating": "CTC",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-23",
+          "time": "11:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-almost-grazia",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-26",
+          "time": "11:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-almost-grazia",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-25",
+          "time": "13:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416378",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "IFF26 Sweetheart",
+      "runtimeMinutes": null,
+      "rating": "PG",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-23",
+          "time": "18:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-sweetheart",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-25",
+          "time": "11:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-sweetheart",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-24",
+          "time": "11:15",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416372",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-27",
+          "time": "18:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416390",
           "flags": []
         }
       ],
@@ -6727,6 +5183,86 @@
       "isNearingEndOfRun": false
     },
     {
+      "title": "IFF26 Three Goodbyes",
+      "runtimeMinutes": null,
+      "rating": "CTC",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-23",
+          "time": "20:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-three-goodbyes",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-27",
+          "time": "17:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-three-goodbyes",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-26",
+          "time": "17:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416385",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "IFF26 Words Left Unspoken",
+      "runtimeMinutes": null,
+      "rating": "CTC",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-23",
+          "time": "13:10",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-words-left-unspoken",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-25",
+          "time": "20:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-words-left-unspoken",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-25",
+          "time": "15:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416379",
+          "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-26",
+          "time": "20:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416386",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
       "title": "PULP: WHAT DO YOU DO FOR AN ENCORE?",
       "runtimeMinutes": null,
       "rating": null,
@@ -6740,7 +5276,7 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Sheep Detectives, The",
@@ -6756,7 +5292,7 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "Speed Racer",
@@ -6772,7 +5308,7 @@
           "flags": []
         }
       ],
-      "isNearingEndOfRun": false
+      "isNearingEndOfRun": true
     },
     {
       "title": "AVENGERS: ENDGAME ENCORE",
@@ -6817,6 +5353,42 @@
           "time": "19:00",
           "ticketPrice": null,
           "bookingUrl": "https://www.astortheatre.net.au/sessions/2026-09-24-000",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": false
+    },
+    {
+      "title": "IFF26 Life is Life",
+      "runtimeMinutes": null,
+      "rating": "CTC",
+      "sessions": [
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-24",
+          "time": "15:40",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-life-is-life",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-26",
+          "time": "13:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/iff26-life-is-life",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-24",
+          "time": "20:20",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=416376",
           "flags": []
         }
       ],
@@ -7000,6 +5572,14 @@
           "ticketPrice": null,
           "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=418671",
           "flags": []
+        },
+        {
+          "cinemaId": "nova",
+          "date": "2026-09-28",
+          "time": "20:30",
+          "ticketPrice": null,
+          "bookingUrl": "https://ticketing.cinemanova.com.au/Ticketing/visSelectTickets.aspx?cinemacode=1&txtSessionId=418672",
+          "flags": []
         }
       ],
       "isNearingEndOfRun": false
@@ -7022,6 +5602,16 @@
         {
           "cinemaId": "kino",
           "date": "2026-09-26",
+          "time": "15:45",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.palacecinemas.com.au/movies/the-great-arch",
+          "flags": [
+            "No Free Tickets"
+          ]
+        },
+        {
+          "cinemaId": "kino",
+          "date": "2026-09-27",
           "time": "15:45",
           "ticketPrice": null,
           "bookingUrl": "https://www.palacecinemas.com.au/movies/the-great-arch",
@@ -7143,7 +5733,23 @@
         }
       ],
       "isNearingEndOfRun": false
+    },
+    {
+      "title": "Leaving Las Vegas & Pickpocket",
+      "runtimeMinutes": null,
+      "rating": null,
+      "sessions": [
+        {
+          "cinemaId": "astor",
+          "date": "2026-09-28",
+          "time": "19:00",
+          "ticketPrice": null,
+          "bookingUrl": "https://www.astortheatre.net.au/sessions/2026-09-28-000",
+          "flags": []
+        }
+      ],
+      "isNearingEndOfRun": false
     }
   ],
-  "scrapedAt": "2026-09-19T21:49:59.088Z"
+  "scrapedAt": "2026-09-20T21:57:39.597Z"
 }
